@@ -1,0 +1,348 @@
+MK1:
+Yao Chen
+jmgao@bjfu.edu.cn
+Adsorption: Fig. 1., Fig. 3.
+Pore: Fig. 2., Fig. 4.
+
+MK2:
+Fangwei Ma
+fangwei_ma@hotmail.com
+Adsorption: Fig. 7. (a)
+Pore: Fig. 7. (b)
+
+MK3:
+Adetunji Ajibola Awe
+tunjyaweson2007@gmail.com
+Adsorption:?
+Pore:
+
+MK4:
+Wan Mohd Ashri Wan Daud
+ashri@um.edu.my
+Adsorption: Fig. 2., Fig. 3.
+Pore: Fig. 4., Fig. 5.
+
+MK5:
+Oleg Kuzmin
+kuzmin_ovl@nuft.edu.ua
+Adsorption: Figure 3.
+Pore: Figure 4., Figure 8.
+
+MK6:
+J.D. Ekhe
+jdekhe@chm.vnit.ac.in
+Adsorption: Fig. 1.
+Pore:?
+
+MK7:
+Jinhui Peng
+jhpeng@kmust.edu.cn
+Adsorption: Fig. 2., Fig. 4.
+Pore:?
+
+MK8:
+Ji Sun Im
+jsim@krict.re.kr
+Adsorption: Fig. 5.
+Pore:?
+
+MK9:
+Serafin Jarosław
+Jaroslaw.Serafin@zut.edu.pl
+Adsorption: Figure 2.
+Pore: Figure 3.
+
+MK10:
+Katarzyna Lewicka
+katarzyna.lewicka@zut.edu.pl
+Adsorption: Figure 1.
+Pore: Figure 2., Figure 3.
+
+MK11:
+Juan Carlos Moreno-Piraján
+jumoreno@uniandes.edu.co
+Adsorption: Figure 1.
+Pore: Figure 2.
+
+MK12:
+Qingbo Yu
+yuqb@smm.neu.edu.cn
+Adsorption: Figure 2.
+Pore: Figure 3.
+
+MK13:
+Guojie Zhang
+zhangguojie@tyut.edu.cn
+Adsorption: Fig. 7.
+Pore:?
+
+MK14:
+Guangjie Zhao
+zhaows@bjfu.edu.cn
+Adsorption: Fig. 1., Fig. 2.
+Pore: Fig. 3.
+
+MK15:
+Jianxiao Yang
+yangjianxiao@hnu.edu.cn
+Adsorption: Fig. 2 (c)
+Pore: Fig. 2 (d)
+
+MK16:
+Imane Moulefera
+imane.moulefera@um.es
+Adsorption: Figure 2. (a-c)
+Pore: Figure 2. (d-f)
+
+MK17:
+Jing-Pei Cao
+beyondcao@hotmail.com
+Adsorption: Fig. 2., Fig. 6.
+Pore: Fig. 5.
+
+MK18:
+Rokhsareh Rostamian
+rokh_1797@yahoo.com
+Adsorption: FIGURE 1
+Pore: ?
+
+MK19:
+Apiluck Eiad-Ua
+apiluck.ei@kmitl.ac.th
+Adsorption: Figure 4.
+Pore: Figure 4.
+
+MK20:
+Yao Chen
+jmgao@bjfu.edu.cn
+Adsorption: Fig. 1., Fig. 3.
+Pore: Fig. 2., Fig. 4.
+
+MK21:
+Juan Carlos Moreno-Piraján
+jumoreno@uniandes.edu.co
+Adsorption: Figure 1.
+Pore: Figure 2.
+
+MK22:
+Sang Youp Hwang
+syhwang80@gmail.com
+Adsorption: Figure 2. (a)
+Pore: Figure 2. (b)
+
+MK23:
+Naile Karakehya
+nkarakehya@ogu.edu.tr
+Adsorption: Fig. 2. (a)
+Pore: Fig. 2.(b)
+
+MK24:
+Xiangdong Xing
+xaxingxiangdong@163.com
+Adsorption: Figure 3
+Pore: Figure 4
+
+MK25:
+Jean Mulopo
+jean.mulopo@wits.ac.za
+Adsorption: Fig. 4 (a), Fig. 5, Fig. 9
+Pore: ?
+
+MK26:
+Hui Hu
+huhhust@163.com
+Adsorption: Fig. 2 (a,c), Fig. 3 (a.b.c)
+Pore: Fig. 2(b,d), Fig. 3(d,e,f)
+
+MK27:
+Changwei Hu
+changweihu@scu.edu.cn
+Adsorption: Fig. 4 (a,c,e)
+Pore: Fig. 4 (b,d,f)
+
+MK28:
+R.J. Wróbel
+rwrobel@zut.edu.pl
+Adsorption: Figure 3.
+Pore: Figure 4.
+
+MK29:
+Sirikanjana Thongmee
+fscisjn@ku.ac.th
+Adsorption: Fig. 4.(a)
+Pore: Fig. 4.(b)
+
+MK30:
+Kwang S Kim
+kimks@unist.ac.kr
+Adsorption: Figure 5.(a), Figure 6., Figure 7., Figure 8.
+Pore: Figure 5.(c,d)
+
+MK31:
+Wei Li
+lwg3@163.com
+Adsorption: Fig. 5, Fig. 7
+Pore:?
+
+MK32:
+Hara Mohan Jena
+hmjena@nitrkl.ac.in
+Adsorption: Fig. 2., Fig. 3.
+Pore:?
+
+MK33:
+İlknur Demiral
+idemiral@ogu.edu.tr
+Adsorption: Figure 2., Figure 3.
+Pore: Figure 6.
+
+MK34:
+Jinhui Peng
+jhpeng@kmust.edu.cn
+Adsorption: Fig. 4., Fig. 6.
+Pore: Fig. 8., Fig. 9.
+
+MK35:
+Hye-Min Lee
+leehm@kcarbon.or.kr
+Adsorption: Fig. 5.
+Pore: Fig. 6.
+
+MK36:
+Zhenyu Ryu
+zyryu@ms.sxicc.ac.cn.
+Adsorption: FIG. 1., FIG. 2., FIG. 3.
+Pore: FIG. 5.
+
+MK37:
+Chong Rae Park
+crpark@gong.snu.ac.kr
+Adsorption: Fig. 1.
+Pore: Fig. 2.
+
+MK38:
+Carlos Moreno-Castilla
+cmoreno@ugr.es
+Adsorption: Fig. 1.
+Pore:?
+
+MK39:
+J. J. Rodríguez
+jjrj@uma.es.
+Adsorption: Figure 3., Figure 6.
+Pore: Figure 5., Figure 7., Figure 8.
+
+MK40:
+Jin Miyawaki
+miyawaki@cm.kyushu-u.ac.jp
+Adsorption: Fig. 1
+Pore: Fig. 2
+
+MK41:
+Ziqiang Lei
+nuli518@126.com
+Adsorption: Fig. 2.(a), Fig. 3.(a), Fig. 4.(a)
+Pore: Fig. 2.(b,c), Fig. 3.(b,c), Fig. 4.(b,c)
+
+MK42:
+Mengqi Wei
+yuqb@smm.neu.edu.cn
+Adsorption: Figure 2.
+Pore: Figure 3.
+
+MK43:
+Kay-Hyeok An
+khandragon@jj.ac.kr
+Adsorption: Figure 6.
+Pore: Figure 7., Figure 8.
+
+MK44:
+Dengfeng Zhang
+dengfengz@aol.com
+Adsorption: Figure 1.
+Pore:?
+
+MK45:
+Rui A. R. Boaventura
+bventura@fe.up.pt
+Adsorption: Figure 2.
+Pore:?
+
+MK46:
+David Chiaramonti
+david.chiaramonti@polito.it
+Adsorption: Figure 3.
+Pore: Figure 4.
+
+MK47:
+Sibel Aslan
+sibela@firat.edu.tr
+Adsorption: Figure 6.
+Pore: Figure 8.
+
+MK48:
+P.J.M. Carrott
+peter@uevora.pt
+Adsorption: Fig. 1
+Pore: Fig. 4, Fig. 3
+
+MK49:
+Gamzenur Özsin
+gozsin@anadolu.edu.tr
+Adsorption: Fig. 3
+Pore: Fig. 3
+
+MK50:
+Hsisheng Teng
+hteng@mail.ncku.edu.tw
+Adsorption: Fig. 1., Fig. 2.
+Pore:?
+
+MK51:
+E. Fuente
+enriquef@incar.csic.es
+Adsorption: Fig. 2., Fig. 3.
+Pore:?
+
+MK52:
+Qingbo Yu
+yuqb@smm.neu.edu.cn
+Adsorption: Figure 2.
+Pore: Figure 3.
+
+MK53:
+Habibollah Younesi
+hunesi@modares.ac.ir
+Adsorption: Fig. 2, Fig. 6
+Pore:?
+
+MK54:
+Carlos R. Rambo
+carlos.rambo@ufsc.br
+Adsorption: Figure 4.
+Pore: Figure 5.
+
+MK55:
+Guojie Zhang
+zhangguojie@tyut.edu.cn
+Adsorption: Fig. 7., Fig. 9., Fig. 10.
+Pore: Fig. 8.
+
+MK56:
+Jianjun Lu
+lujianjunktz@tyut.edu.cn
+Adsorption: Figure 7. (a), Figure 9.
+Pore: Figure 7. (b)
+
+MK57:
+Imene Bekri-Abbes
+bekrimene@gmail.com
+Adsorption: Figure 2.
+Pore:?
+
+MK58:
+Zulamita Zapata-Benabithe
+zulamita.zapata@upb.edu.co
+Adsorption: Fig. 2 (a)
+Pore: Fig. 2 (b)
+

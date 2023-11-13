@@ -1,0 +1,406 @@
+MK1:
+	Zhang, J.; Gao, J.; Chen, Y.; Hao, X.; Jin, X. Characterization, preparation, and reaction mechanism of hemp stem based activated carbon, Results in Physics, 7, 2017, 1628, https://doi.org/10.1016/j.rinp.2017.04.028
+	Adsorption isotherms:  Figure 4.
+	Pore distribution:  Figure 4.
+	Contact person: Apiluck Eiad-Ua: apiluck.ei@kmitl.ac.th
+
+
+MK2:
+	Cui, X.; Jiang, Y.; He, Z.; Liu, Z.; Yang, X.; Wan, J.; Liu, Y.; Ma, F. Preparation of tank-like resin-derived porous carbon sphere for supercapacitor: The influence of KOH activator and activation temperature on structure and performance, Diamond and Related Materials, 136, 2023, 110054, https://doi.org/10.1016/j.diamond.2023.110054
+	Adsorption isotherms:  Fig. 4.(a)
+	Pore distribution:  Fig. 4.(b)
+	Contact person: Sirikanjana Thongmee: fscisjn@ku.ac.th
+
+
+MK3:
+	Awe, A.; Opeolu, B.; Fatoki, O.; Ayanda, O.; Jackson, V.; Snyman, R. Preparation and characterisation of activated carbon from Vitisvinifera leaf litter and its adsorption performance for aqueous phenanthrene, Applied Biological Chemistry, 63, 2020, 12, https://doi.org/10.1186/s13765-020-00494-1
+	Adsorption isotherms:  Figure 3., Figure 6.
+	Pore distribution:  Figure 5., Figure 7., Figure 8.
+	Contact person: J. J. Rodríguez: jjrj@uma.es.
+
+
+MK4:
+	Arami-Niya, A.; Daud, W.; Mjalli, F. Using granular activated carbon prepared from oil palm shell by ZnCl2 and physical activation for methane adsorption, Journal of Analytical and Applied Pyrolysis, 89, 2010, 197, https://doi.org/10.1016/j.jaap.2010.08.006
+	Adsorption isotherms:  Fig. 3
+	Pore distribution:  Fig. 3
+	Contact person: Gamzenur Özsin: gozsin@anadolu.edu.tr
+
+
+MK5:
+	Kuzmin, O.; Tamarkina, J.; Shendrik, T.; Zubkova, V.; Koval, O.; Roman, T. Production of active coal from pyrolyzed wood wastes by alkaline activation of KOH, Ukrainian Food Journal, 6, 2017/09/01, 443, https://doi.org/10.24263/2304-974X-2017-6-3-5
+	Adsorption isotherms:  Fig. 2 (a)
+	Pore distribution:  Fig. 2 (b)
+	Contact person: Zulamita Zapata-Benabithe: zulamita.zapata@upb.edu.co
+
+
+MK6:
+	Maldhure, A.; Ekhe, J. Preparation and characterizations of microwave assisted activated carbons from industrial waste lignin for Cu(II) sorption, Chemical Engineering Journal, 168, 2011, 1103, https://doi.org/10.1016/j.cej.2011.01.091
+	Adsorption isotherms:  Fig. 1.
+	Pore distribution: ?
+	Contact person: J.D. Ekhe: jdekhe@chm.vnit.ac.in
+
+
+MK7:
+	Yang, K.; Peng, J.; Srinivasakannan, C.; Zhang, L.; Xia, H.; Duan, X. Preparation of high surface area activated carbon from coconut shells using microwave heating, Bioresource Technology, 101, 2010, 6163, https://doi.org/10.1016/j.biortech.2010.03.001
+	Adsorption isotherms:  Fig. 2., Fig. 4.
+	Pore distribution: ?
+	Contact person: Jinhui Peng: jhpeng@kmust.edu.cn
+
+
+MK8:
+	Choi, Y.; Kim, J.; Lee, K.; Lee, Y.; Im, J. Correlation verification of process factors and harmful gas adsorption properties for optimization of physical activation parameters of PAN-based carbon fibers, Journal of Industrial and Engineering Chemistry, 80, 2019, 152, https://doi.org/10.1016/j.jiec.2019.07.044
+	Adsorption isotherms:  Fig. 5.
+	Pore distribution: ?
+	Contact person: Ji Sun Im: jsim@krict.re.kr
+
+
+MK9:
+	Serafin,  J.; Antosik,  A.; Wilpiszewska,  K.; Czech,  Z. Preparation of Activated Carbon from the Biodegradable film for Co Capture Applications, Polish Journal of Chemical Technology, 20, 2018, 75, https://doi.org/doi:10.2478/pjct-2018-0041
+	Adsorption isotherms:  Figure 2.
+	Pore distribution:  Figure 3.
+	Contact person: Serafin Jarosław: Jaroslaw.Serafin@zut.edu.pl
+
+
+MK10:
+	Lewicka,  K. Activated carbons prepared from hazelnut shells, walnut shells and peanut shells for high CO adsorption, Polish Journal of Chemical Technology, 19, 2017, 38, https://doi.org/doi:10.1515/pjct-2017-0025
+	Adsorption isotherms:  Figure 1.
+	Pore distribution:  Figure 2., Figure 3.
+	Contact person: Katarzyna Lewicka: katarzyna.lewicka@zut.edu.pl
+
+
+MK11:
+	Bernal, V.; Giraldo, L.; Moreno-Piraján, J.; Balsamo, M.; Erto, A. Mechanisms of Methylparaben Adsorption onto Activated Carbons: Removal Tests Supported by a Calorimetric Study of the Adsorbent–Adsorbate Interactions, Molecules, 24, 2019, , https://doi.org/10.3390/molecules24030413
+	Adsorption isotherms:  Figure 1.
+	Pore distribution:  Figure 2.
+	Contact person: Juan Carlos Moreno-Piraján: jumoreno@uniandes.edu.co
+
+
+MK12:
+	Wei, M.; Yu, Q.; Duan, W.; Zuo, Z.; Hou, L.; Dai, J. CO2 adsorption and desorption performance of waste ion-exchange resin-based activated carbon, Environmental Progress & Sustainable Energy, 37, 2018, 703, https://doi.org/10.1002/ep.12743
+	Adsorption isotherms:  Figure 2.
+	Pore distribution:  Figure 3.
+	Contact person: Qingbo Yu: yuqb@smm.neu.edu.cn
+
+
+MK13:
+	Wu, C.; Zhang, G.; Liu, J.; Wang, Y.; Zhao, Y.; Li, G. A green strategy to prepare nitrogen-oxygen co-doped porous carbons from macadamia nut shells for post-combustion CO2 capture and supercapacitors, Journal of Analytical and Applied Pyrolysis, 171, 2023, 105952, https://doi.org/10.1016/j.jaap.2023.105952
+	Adsorption isotherms:  Fig. 7.
+	Pore distribution: ?
+	Contact person: Guojie Zhang: zhangguojie@tyut.edu.cn
+
+
+MK14:
+	Liu, Z.; Huang, Y.; Zhao, G. Preparation and Characterization of Activated Carbon Fibers from Liquefied Wood by ZnCl2 Activation, Bioresources, 11, 2016/05/01, 3178, https://doi.org/10.15376/biores.11.2.3178-3190
+	Adsorption isotherms:  Fig. 1., Fig. 2.
+	Pore distribution:  Fig. 3.
+	Contact person: Guangjie Zhao: zhaows@bjfu.edu.cn
+
+
+MK15:
+	Wang, H.; Yang, J.; Li, J.; Shi, K.; Li, X. Effects of oxygen content of pitch precursors on the porous texture and surface chemistry of pitch-based activated carbon fibers, SN Applied Sciences, 1, 2019, 248, https://doi.org/10.1007/s42452-019-0282-1
+	Adsorption isotherms:  Fig. 2 (c)
+	Pore distribution:  Fig. 2 (d)
+	Contact person: Jianxiao Yang: yangjianxiao@hnu.edu.cn
+
+
+MK16:
+	Madani, N.; Moulefera, I.; Boumad, S.; Cazorla-Amorós, D.; Gandía, F.; Cherifi, O.; Bouchenafa-Saib, N. Activated Carbon from Stipa tenacissima for the Adsorption of Atenolol, C, 8, 2022, , https://doi.org/10.3390/c8040066
+	Adsorption isotherms:  Figure 2. (a-c)
+	Pore distribution:  Figure 2. (d-f)
+	Contact person: Imane Moulefera: imane.moulefera@um.es
+
+
+MK17:
+	Zhao, X.; Huang, S.; Cao, J.; Xi, S.; Wei, X.; Kamamoto, J.; Takarada, T. KOH activation of a HyperCoal to develop activated carbons for electric double-layer capacitors, Journal of Analytical and Applied Pyrolysis, 105, 2014, 116, https://doi.org/10.1016/j.jaap.2013.10.010
+	Adsorption isotherms:  Fig. 2., Fig. 6.
+	Pore distribution:  Fig. 5.
+	Contact person: Jing-Pei Cao: beyondcao@hotmail.com
+
+
+MK18:
+	Rostamian, R.; Heidarpour, M.; Mousavi, S.; Majid, A. Preparation, characterization and sodium sorption capability of rice husk carbonaceous adsorbents, Fresenius Environmental Bulletin, 24, 2015/01/01, 1649, 
+	Adsorption isotherms:  FIGURE 1
+	Pore distribution:  ?
+	Contact person: Rokhsareh Rostamian: rokh_1797@yahoo.com
+
+
+MK19:
+	Kaewtrakulchai, N.; Faungnawakij, K.; Eiad-Ua, A. Parametric Study on Microwave-Assisted Pyrolysis Combined KOH Activation of Oil Palm Male Flowers Derived Nanoporous Carbons, Materials, 13, 2020, , https://doi.org/10.3390/ma13122876
+	Adsorption isotherms:  Figure 4.
+	Pore distribution:  Figure 4.
+	Contact person: Apiluck Eiad-Ua: apiluck.ei@kmitl.ac.th
+
+
+MK20:
+	Zhang, J.; Gao, J.; Chen, Y.; Hao, X.; Jin, X. Characterization, preparation, and reaction mechanism of hemp stem based activated carbon, Results in Physics, 7, 2017, 1628, https://doi.org/10.1016/j.rinp.2017.04.028
+	Adsorption isotherms:  Fig. 1., Fig. 3.
+	Pore distribution:  Fig. 2., Fig. 4.
+	Contact person: Yao Chen: jmgao@bjfu.edu.cn
+
+
+MK21:
+	Bernal, V.; Giraldo, L.; Moreno-Piraján, J.; Balsamo, M.; Erto, A. Mechanisms of Methylparaben Adsorption onto Activated Carbons: Removal Tests Supported by a Calorimetric Study of the Adsorbent–Adsorbate Interactions, Molecules, 24, 2019, , https://doi.org/10.3390/molecules24030413
+	Adsorption isotherms:  Figure 1.
+	Pore distribution:  Figure 2.
+	Contact person: Juan Carlos Moreno-Piraján: jumoreno@uniandes.edu.co
+
+
+MK22:
+	Park, J.; Lee, G.; Hong, B.; Hwang, S. Regeneration of Activated Carbons Spent by Waste Water Treatment Using KOH Chemical Activation, Applied Sciences, 9, 2019, , https://doi.org/10.3390/app9235132
+	Adsorption isotherms:  Figure 2. (a)
+	Pore distribution:  Figure 2. (b)
+	Contact person: Sang Youp Hwang: syhwang80@gmail.com
+
+
+MK23:
+	Karakehya, N. Effects of one-step and two-step KOH activation method on the properties and supercapacitor performance of highly porous activated carbons prepared from Lycopodium clavatum spores, Diamond and Related Materials, 135, 2023, 109873, https://doi.org/10.1016/j.diamond.2023.109873
+	Adsorption isotherms:  Fig. 2. (a)
+	Pore distribution:  Fig. 2.(b)
+	Contact person: Naile Karakehya: nkarakehya@ogu.edu.tr
+
+
+MK24:
+	Lan, X.; Jiang, X.; Song, Y.; Jing, X.; Xing, X. The effect of activation temperature on structure and properties of blue coke-based activated carbon by CO2 activation, Green Processing and Synthesis, 8, 2019, 837, https://doi.org/doi:10.1515/gps-2019-0054
+	Adsorption isotherms:  Figure 3
+	Pore distribution:  Figure 4
+	Contact person: Xiangdong Xing: xaxingxiangdong@163.com
+
+
+MK25:
+	Abdulsalam, J.; Mulopo, J.; Oboirien, B.; Bada, S.; Falcon, R. Experimental evaluation of activated carbon derived from South Africa discard coal for natural gas storage, International Journal of Coal Science & Technology, 6, 2019, 459, https://doi.org/10.1007/s40789-019-0262-5
+	Adsorption isotherms:  Fig. 4 (a), Fig. 5, Fig. 9
+	Pore distribution:  ?
+	Contact person: Jean Mulopo: jean.mulopo@wits.ac.za
+
+
+MK26:
+	Gao, J.; Xie, J.; Liu, X.; Hu, H. Preparation and evaluation of modified cyanobacteria-derived activated carbon for H2 adsorption, RSC Adv., 7, 2017, 20412, https://doi.org/10.1039/C6RA28660G
+	Adsorption isotherms:  Fig. 2 (a,c), Fig. 3 (a.b.c)
+	Pore distribution:  Fig. 2(b,d), Fig. 3(d,e,f)
+	Contact person: Hui Hu: huhhust@163.com
+
+
+MK27:
+	Li, Y.; Zhang, X.; Yang, R.; Li, G.; Hu, C. The role of H3PO4 in the preparation of activated carbon from NaOH-treated rice husk residue, RSC Adv., 5, 2015, 32626, https://doi.org/10.1039/C5RA04634C
+	Adsorption isotherms:  Fig. 4 (a,c,e)
+	Pore distribution:  Fig. 4 (b,d,f)
+	Contact person: Changwei Hu: changweihu@scu.edu.cn
+
+
+MK28:
+	Kaliszewski,  M.; Zgrzebnicki,  M.; Kałamaga,  A.; Pinjara,  S.; Wróbel,  R. Commercial Kevlar derived activated carbons for CO and CH sorption, Polish Journal of Chemical Technology, 23, 2021, 81, https://doi.org/doi:10.2478/pjct-2021-0021
+	Adsorption isotherms:  Figure 3.
+	Pore distribution:  Figure 4.
+	Contact person: R.J. Wróbel: rwrobel@zut.edu.pl
+
+
+MK29:
+	Somyanonthanakun, W.; Ahmed, R.; Krongtong, V.; Thongmee, S. Studies on the adsorption of Pb(II) from aqueous solutions using sugarcane bagasse-based modified activated carbon with nitric acid: Kinetic, isotherm and desorption, Chemical Physics Impact, 6, 2023, 100181, https://doi.org/10.1016/j.chphi.2023.100181
+	Adsorption isotherms:  Fig. 4.(a)
+	Pore distribution:  Fig. 4.(b)
+	Contact person: Sirikanjana Thongmee: fscisjn@ku.ac.th
+
+
+MK30:
+	Kemp, K.; Baek, S.; Lee, W.; eyyappan, M.; Kim, K. Activated carbon derived from waste coffee grounds for stable methane storage, Nanotechnology, 26, 2015, 385602, https://doi.org/10.1088/0957-4484/26/38/385602
+	Adsorption isotherms:  Figure 5.(a), Figure 6., Figure 7., Figure 8.
+	Pore distribution:  Figure 5.(c,d)
+	Contact person: Kwang S Kim: kimks@unist.ac.kr
+
+
+MK31:
+	Li, W.; Yang, K.; Peng, J.; Zhang, L.; Guo, S.; Xia, H. Effects of carbonization temperatures on characteristics of porosity in coconut shell chars and activated carbons derived from carbonized coconut shell chars, Industrial Crops and Products, 28, 2008, 190, https://doi.org/10.1016/j.indcrop.2008.02.012
+	Adsorption isotherms:  Fig. 5, Fig. 7
+	Pore distribution: ?
+	Contact person: Wei Li: lwg3@163.com
+
+
+MK32:
+	Kumar, A.; Jena, H. Preparation and characterization of high surface area activated carbon from Fox nut (Euryale ferox) shell by chemical activation with H3PO4, Results in Physics, 6, 2016, 651, https://doi.org/10.1016/j.rinp.2016.09.012
+	Adsorption isotherms:  Fig. 2., Fig. 3.
+	Pore distribution: ?
+	Contact person: Hara Mohan Jena: hmjena@nitrkl.ac.in
+
+
+MK33:
+	Demiral, İ.; Şamdan, C. Preparation and Characterisation of Activated Carbon From Pumpkin Seed Shell Using H3PO4, Anadolu University Journal of Science and Technology-A Applied Sciences and Engineering, 17, 2016/02/25, , https://doi.org/10.18038/btda.64281
+	Adsorption isotherms:  Figure 2., Figure 3.
+	Pore distribution:  Figure 6.
+	Contact person: İlknur Demiral: idemiral@ogu.edu.tr
+
+
+MK34:
+	Yang, K.; Peng, J.; Xia, H.; Zhang, L.; Srinivasakannan, C.; Guo, S. Textural characteristics of activated carbon by single step CO2 activation from coconut shells, Journal of the Taiwan Institute of Chemical Engineers, 41, 2010, 367, https://doi.org/10.1016/j.jtice.2009.09.004
+	Adsorption isotherms:  Fig. 4., Fig. 6.
+	Pore distribution:  Fig. 8., Fig. 9.
+	Contact person: Jinhui Peng: jhpeng@kmust.edu.cn
+
+
+MK35:
+	Ahn, J.; Lee, H.; Kim, B. Highly mesoporous activated carbon fibers using high density polyethylene precursor with a multi-step stabilization technique for automobile carbon canister, Journal of Industrial and Engineering Chemistry, , 2023, , https://doi.org/10.1016/j.jiec.2023.08.024
+	Adsorption isotherms:  Fig. 5.
+	Pore distribution:  Fig. 6.
+	Contact person: Hye-Min Lee: leehm@kcarbon.or.kr
+
+
+MK36:
+	Ryu, Z.; Zheng, J.; Wang, M.; Zhang, B. Nitrogen Adsorption Studies of PAN-Based Activated Carbon Fibers Prepared by Different Activation Methods, Journal of Colloid and Interface Science, 230, 2000, 312, https://doi.org/10.1006/jcis.2000.7078
+	Adsorption isotherms:  FIG. 1., FIG. 2., FIG. 3.
+	Pore distribution:  FIG. 5.
+	Contact person: Zhenyu Ryu: zyryu@ms.sxicc.ac.cn.
+
+
+MK37:
+	Oh, G.; Park, C. Preparation and characteristics of rice-straw-based porous carbons with high adsorption capacity, Fuel, 81, 2002, 327, https://doi.org/10.1016/S0016-2361(01)00171-5
+	Adsorption isotherms:  Fig. 1.
+	Pore distribution:  Fig. 2.
+	Contact person: Chong Rae Park: crpark@gong.snu.ac.kr
+
+
+MK38:
+	Ubago-Pérez, R.; Carrasco-Marín, F.; Fairén-Jiménez, D.; Moreno-Castilla, C. Granular and monolithic activated carbons from KOH-activation of olive stones, Microporous and Mesoporous Materials, 92, 2006, 64, https://doi.org/10.1016/j.micromeso.2006.01.002
+	Adsorption isotherms:  Fig. 1.
+	Pore distribution: ?
+	Contact person: Carlos Moreno-Castilla: cmoreno@ugr.es
+
+
+MK39:
+	Gonzalez-Serrano, E.; Cordero, T.; Rodríguez-Mirasol, J.; Rodríguez, J. Development of Porosity upon Chemical Activation of Kraft Lignin with ZnCl2, Ind. Eng. Chem. Res., 36, 1997, 4832, https://doi.org/10.1021/ie970261q
+	Adsorption isotherms:  Figure 3., Figure 6.
+	Pore distribution:  Figure 5., Figure 7., Figure 8.
+	Contact person: J. J. Rodríguez: jjrj@uma.es.
+
+
+MK40:
+	Yi, H.; Nakabayashi, K.; Yoon, S.; Miyawaki, J. Study on the applicability of pressurized physically activated carbon as an adsorbent in adsorption heat pumps, RSC Adv., 12, 2022, 2558, https://doi.org/10.1039/D1RA08395C
+	Adsorption isotherms:  Fig. 1
+	Pore distribution:  Fig. 2
+	Contact person: Jin Miyawaki: miyawaki@cm.kyushu-u.ac.jp
+
+
+MK41:
+	Zhang, Z.; Luo, X.; Liu, Y.; Zhou, P.; Ma, G.; Lei, Z.; , L. A low cost and highly efficient adsorbent (activated carbon) prepared from waste potato residue, Journal of the Taiwan Institute of Chemical Engineers, 49, 2015, 206, https://doi.org/10.1016/j.jtice.2014.11.024
+	Adsorption isotherms:  Fig. 2.(a), Fig. 3.(a), Fig. 4.(a)
+	Pore distribution:  Fig. 2.(b,c), Fig. 3.(b,c), Fig. 4.(b,c)
+	Contact person: Ziqiang Lei: nuli518@126.com
+
+
+MK42:
+	Wei, M.; Zhao, Q. CO2 Adsorption and Desorption by Waste Ion-Exchange Resin–Based Activated Carbon on Fixed Bed, Frontiers in Energy Research, 9, 2021/11/02, , https://doi.org/10.3389/fenrg.2021.772710
+	Adsorption isotherms:  Figure 2.
+	Pore distribution:  Figure 3.
+	Contact person: Mengqi Wei: yuqb@smm.neu.edu.cn
+
+
+MK43:
+	Lee, H.; Kim, K.; Park, Y.; An, K.; Park, S.; Kim, B. Activated Carbons from Thermoplastic Precursors and Their Energy Storage Applications, Nanomaterials, 9, 2019, , https://doi.org/10.3390/nano9060896
+	Adsorption isotherms:  Figure 6.
+	Pore distribution:  Figure 7., Figure 8.
+	Contact person: Kay-Hyeok An: khandragon@jj.ac.kr
+
+
+MK44:
+	Tao, J.; Huo, P.; Fu, Z.; Zhang, J.; Yang, Z.; Zhang, D. Characterization and phenol adsorption performance of activated carbon prepared from tea residue by NaOH activation, Environmental Technology, 40, 2019, 171, https://doi.org/10.1080/09593330.2017.1384069
+	Adsorption isotherms:  Figure 1.
+	Pore distribution: ?
+	Contact person: Dengfeng Zhang: dengfengz@aol.com
+
+
+MK45:
+	Pintor, A.; Silvestre-Albero, A.; Ferreira, C.; Pereira, J.; Vilar, V.; Botelho, C.; Rodríguez-Reinoso, F.; Boaventura, R. Textural and Surface Characterization of Cork-Based Sorbents for the Removal of Oil from Water, Ind. Eng. Chem. Res., 52, 2013, 16427, https://doi.org/10.1021/ie402038n
+	Adsorption isotherms:  Figure 2.
+	Pore distribution: ?
+	Contact person: Rui A. R. Boaventura: bventura@fe.up.pt
+
+
+MK46:
+	Miliotti, E.; Rosi, L.; Bettucci, L.; Lotti, G.; Rizzo, A.; Chiaramonti, D. Characterization of Chemically and Physically Activated Carbons from Lignocellulosic Ethanol Lignin-Rich Stream via Hydrothermal Carbonization and Slow Pyrolysis Pretreatment, Energies, 13, 2020, , https://doi.org/10.3390/en13164101
+	Adsorption isotherms:  Figure 3.
+	Pore distribution:  Figure 4.
+	Contact person: David Chiaramonti: david.chiaramonti@polito.it
+
+
+MK47:
+	Şirazi, M.; Aslan, S. Comprehensive characterization of high surface area activated carbon prepared from olive pomace by KOH activation, Chemical Engineering Communications, 208, 2021, 1479, https://doi.org/10.1080/00986445.2020.1864628
+	Adsorption isotherms:  Figure 6.
+	Pore distribution:  Figure 8.
+	Contact person: Sibel Aslan: sibela@firat.edu.tr
+
+
+MK48:
+	Carrott, P.; Ribeiro Carrott, M.; Suhas,.. Comparison of the Dubinin–Radushkevich and Quenched Solid Density Functional Theory approaches for the characterisation of narrow microporosity in activated carbons obtained by chemical activation with KOH or NaOH of Kraft and hydrolytic lignins, Carbon, 48, 2010, 4162, https://doi.org/10.1016/j.carbon.2010.07.031
+	Adsorption isotherms:  Fig. 1
+	Pore distribution:  Fig. 4, Fig. 3
+	Contact person: P.J.M. Carrott: peter@uevora.pt
+
+
+MK49:
+	Özsin, G.; Kılıç, M.; Apaydın-Varol, E.; Pütün, A. Chemically activated carbon production from agricultural waste of chickpea and its application for heavy metal adsorption: equilibrium, kinetic, and thermodynamic studies, Applied Water Science, 9, 2019, 56, https://doi.org/10.1007/s13201-019-0942-8
+	Adsorption isotherms:  Fig. 3
+	Pore distribution:  Fig. 3
+	Contact person: Gamzenur Özsin: gozsin@anadolu.edu.tr
+
+
+MK50:
+	Teng, H.; Wang, S. Preparation of porous carbons from phenol–formaldehyde resins with chemical and physical activation, Carbon, 38, 2000, 817, https://doi.org/10.1016/S0008-6223(99)00160-8
+	Adsorption isotherms:  Fig. 1., Fig. 2.
+	Pore distribution: ?
+	Contact person: Hsisheng Teng: hteng@mail.ncku.edu.tw
+
+
+MK51:
+	Girón, R.; Gil, R.; Suárez-Ruiz, I.; Fuente, E.; Ruiz, B. Adsorbents/catalysts from forest biomass fly ash. Influence of alkaline activating agent, SI: Characterization of Porous Solids X, 209, 2015, 45, https://doi.org/10.1016/j.micromeso.2015.01.051
+	Adsorption isotherms:  Fig. 2., Fig. 3.
+	Pore distribution: ?
+	Contact person: E. Fuente: enriquef@incar.csic.es
+
+
+MK52:
+	Wei, M.; Yu, Q.; Duan, W.; Zuo, Z.; Hou, L.; Dai, J. CO2 adsorption and desorption performance of waste ion-exchange resin-based activated carbon, Environmental Progress & Sustainable Energy, 37, 2018, 703, https://doi.org/10.1002/ep.12743
+	Adsorption isotherms:  Figure 2.
+	Pore distribution:  Figure 3.
+	Contact person: Qingbo Yu: yuqb@smm.neu.edu.cn
+
+
+MK53:
+	Ekhlasi, L.; Younesi, H.; Rashidi, A.; Bahramifar, N. Populus wood biomass-derived graphene for high CO2 capture at atmospheric pressure and estimated cost of production, Process Safety and Environmental Protection, 113, 2018, 97, https://doi.org/10.1016/j.psep.2017.09.017
+	Adsorption isotherms:  Fig. 2, Fig. 6
+	Pore distribution: ?
+	Contact person: Habibollah Younesi: hunesi@modares.ac.ir
+
+
+MK54:
+	Cruz, O.; Gómez, I.; Rodríguez-Reinoso, F.; Silvestre-Albero, J.; Rambo, C.; Martínez-Escandell, M. Activated carbons with high micropore volume obtained from polyurethane foams for enhanced CO2 adsorption, Chemical Engineering Science, 273, 2023, 118671, https://doi.org/10.1016/j.ces.2023.118671
+	Adsorption isotherms:  Figure 4.
+	Pore distribution:  Figure 5.
+	Contact person: Carlos R. Rambo: carlos.rambo@ufsc.br
+
+
+MK55:
+	Li, Y.; Zhang, G.; Liu, J.; Li, G.; Wang, Y. Optimized preparation of multi-matrix activated carbon for CO2 capture by response surface methodology: The advantages of co-pyrolysis of biomass and plastics, Journal of the Energy Institute, 111, 2023, 101415, https://doi.org/10.1016/j.joei.2023.101415
+	Adsorption isotherms:  Fig. 7., Fig. 9., Fig. 10.
+	Pore distribution:  Fig. 8.
+	Contact person: Guojie Zhang: zhangguojie@tyut.edu.cn
+
+
+MK56:
+	Ge, C.; Lian, D.; Cui, S.; Gao, J.; Lu, J. Highly Selective CO2 Capture on Waste Polyurethane Foam-Based Activated Carbon, Processes, 7, 2019, , https://doi.org/10.3390/pr7090592
+	Adsorption isotherms:  Figure 7. (a), Figure 9.
+	Pore distribution:  Figure 7. (b)
+	Contact person: Jianjun Lu: lujianjunktz@tyut.edu.cn
+
+
+MK57:
+	Nouira, A.; Bekri-Abbes, I.; Srasra, E.; Cansado, I.; Mourão, P. Valorisation of plastic waste from the beverage industry through its transformation into adsorbent and solid fuel materials, Comptes Rendus. Chimie, , 2023, , https://doi.org/10.5802/crchim.214
+	Adsorption isotherms:  Figure 2.
+	Pore distribution: ?
+	Contact person: Imene Bekri-Abbes: bekrimene@gmail.com
+
+
+MK58:
+	Zapata-Benabithe, Z.; Castro, C.; Quintana, G. Kraft lignin as a raw material of activated carbon for supercapacitor electrodes, Journal of Materials Science: Materials in Electronics, 33, 2022, 7031, https://doi.org/10.1007/s10854-022-07884-9
+	Adsorption isotherms:  Fig. 2 (a)
+	Pore distribution:  Fig. 2 (b)
+	Contact person: Zulamita Zapata-Benabithe: zulamita.zapata@upb.edu.co
+
+

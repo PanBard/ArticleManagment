@@ -66,9 +66,14 @@ namespace ArticleManage
         }
 
         private String makePathToDir(String folderName)
-        {
+        {   
+            // This will get the current WORKING directory (i.e. \bin\Debug)
+            string workingDirectory = Environment.CurrentDirectory;
+            // This will get the current PROJECT directory
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+
             String main_folder_name = "\\C_sharp_programs_folders\\";
-            return (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + main_folder_name + folderName);
+            return projectDirectory +  main_folder_name + folderName;
         }
 
         private void makeDirIfNotExist(string path)

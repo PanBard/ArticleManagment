@@ -1,0 +1,338 @@
+MKZ1:
+ZHANG Zhi-an
+zhianzhang@sina.com
+Adsorption:Fig.1, Fig.3
+Pore:Fig.2, Fig.4 
+
+MKZ2:
+Soo-Jin Park
+psjin@pado.krict.re.kr
+Adsorption:Fig. 4.
+Pore:Fig. 5.
+
+MKZ3:
+D. Cazorla-Amorós
+cazorla@ua.es
+Adsorption:Fig. 1., Fig. 4.
+Pore:Fig. 2., Fig. 3., Fig. 5.
+
+MKZ4:
+Zheng-Ming Wang
+zm-wang@aist.go.jp
+Adsorption:Fig. 2.
+Pore:?
+
+MKZ5:
+Chong Rae Park
+crpark@gong.snu.ac.kr
+Adsorption:Fig. 2., Fig. 5. 
+Pore:Fig. 3., Fig. 6.
+
+MKZ6:
+J.M.D Tascón
+tascon@incar.csic.es
+Adsorption:Fig. 2., Fig. 4.
+Pore:?
+
+MKZ7:
+S. Eser
+seser@psu.edu
+Adsorption:Fig. 8., Fig. 9. 
+Pore:Fig. 5.
+
+MKZ8:
+R.F.P.M Moreira
+regina@enq.ufsc.br
+Adsorption:Fig. 2., Fig. 3.
+Pore:Fig. 1.
+
+MKZ9:
+J.M.D. Tascón
+tascon@incar.csic.es
+Adsorption:Fig. 2., Fig. 4.
+Pore:?
+
+MKZ10:
+A. Marcilla
+antonio.marcilla@ua.es
+Adsorption:Fig. 4., Fig. 5.
+Pore:?
+
+MKZ11:
+Dan D Edie
+ddedie@clemson.edu
+Adsorption:Fig. 4., Fig. 5.
+Pore:Fig. 6.
+
+MKZ12:
+Li Zhou
+zhouli@public.tpt.tj.cn
+Adsorption:Fig. 2.
+Pore:Fig. 4.
+
+MKZ13:
+F. Rodrı́guez-Reinoso
+zmarl
+Adsorption:Fig. 9.
+Pore:?
+
+MKZ14:
+A Linares-Solano
+linares@ua.es
+Adsorption:Fig. 4.
+Pore:?
+
+MKZ15:
+Badie S Girgis
+girgisbs@hotmail.com
+Adsorption:Fig. 1.
+Pore:Fig. 4.
+
+MKZ16:
+H Tamon
+tamon@cheme.kyoto-u.ac.jp
+Adsorption:Fig. 4., Fig. 6.
+Pore:Fig. 5., Fig. 7.
+
+MKZ17:
+A Linares-Solano
+linares@ua.es
+Adsorption:Fig. 1., Fig. 3.
+Pore:?
+
+MKZ18:
+A.P Carvalho
+ana.carvalho@fc.ul.pt
+Adsorption:Fig. 1., Fig. 2.
+Pore:?
+
+MKZ19:
+W.P Walawender
+walawen@cheme.ksu.edu
+Adsorption:Fig.4., Fig.7.
+Pore:Fig.5., Fig.8.
+
+MKZ20:
+D. Cazorla-Amorós
+cazorla@ua.es
+Adsorption:Fig. 1., Fig. 4.
+Pore:Fig. 2., Fig. 3., Fig. 5.
+
+MKZ21:
+Zhi-an Zhang
+zhianzhang@sina.com
+Adsorption:Fig.1, Fig.3
+Pore:Fig.2, Fig.4
+
+MKZ22:
+An-Hui Lu
+anhuilu@sxicc.ac.cn
+Adsorption:Fig. 1.
+Pore:Fig. 4., Fig. 5.
+
+MKZ23:
+J.M.D. Tascón
+tascon@incar.csic.es
+Adsorption:Fig. 2., Fig. 4.
+Pore:?
+
+MKZ24:
+?
+?
+Adsorption:Figure 1
+Pore:Figure 5
+
+MKZ25:
+Seongyop Lim
+lim9@asem.kyushu-u.ac.jp
+Adsorption:Fig. 3.
+Pore:?
+
+MKZ26:
+Polymnia Galiatsatou
+?
+Adsorption:Fig. 1.
+Pore:?
+
+MKZ27:
+A Linares-Solano
+linares@ua.es
+Adsorption:Fig. 1.
+Pore:?
+
+MKZ28:
+Katsumi Kaneko
+kaneko@pchem2.s.chiba-u.ac.jp
+Adsorption:Fig. 2.
+Pore:?
+
+MKZ29:
+E Ekinci
+ekinci@sariyer.cc.itu.edu.tr
+Adsorption:Fig. 1., Fig. 2.
+Pore:?
+
+MKZ30:
+Mietek Jaroniec
+Jaroniec@scorpio.kent.edu.
+Adsorption:FIG. 1.,  FIG. 2.
+Pore:FIG. 3.
+
+MKZ31:
+R.H. Bradley
+?
+Adsorption:FIG.8.
+Pore:?
+
+MKZ32:
+Ruey-Shin Juang
+cejuang@ce.yzu.edu.tw
+Adsorption:Fig. 1., Fig. 2.
+Pore:Fig. 3., Fig. 4.
+
+MKZ33:
+M. Shimada
+shimada.masahiro@iri.metro.tokyo.jp
+Adsorption:Fig. 2.
+Pore:Fig. 1., Fig. 3. 
+
+MKZ34:
+Badie S. Girgis
+girgisbs@hotmail.com
+Adsorption:Fig. 2.
+Pore:?
+
+MKZ35:
+Krisztina László
+klaszlo@ch.bme.hu
+Adsorption:Fig. 5.
+Pore:Fig. 6.
+
+MKZ36:
+Zhenyu Ryu
+?
+Adsorption:Fig. 1.
+Pore:Fig. 2., Fig. 3.
+
+MKZ37:
+J.M.D Tascón
+tascon@incar.csic.es
+Adsorption:Fig. 1.
+Pore:?
+
+MKZ38:
+Chong Rae Park
+crpark@gong.snu.ac.kr
+Adsorption:Fig. 1.
+Pore:Fig. 2.
+
+MKZ39:
+Xin-hai Li
+xhli@mail.csu.edu.cn
+Adsorption:Fig.1
+Pore:Fig.2
+
+MKZ40:
+Dan D. Edie
+dan.edie@ces.clemson.edu
+Adsorption:Fig. 9., Fig. 10., Fig. 11.
+Pore:Fig. 12.
+
+MKZ41:
+Soo-Jin Park
+psjin@pado.krict.re.kr.
+Adsorption:FIG. 1.
+Pore:FIG. 4., FIG. 5. 
+
+MKZ42:
+Abdel-Nasser A. El-Hendawy
+elhendawy@yahoo.com
+Adsorption:Fig. 1.
+Pore:?
+
+MKZ43:
+P.J.M Carrott
+peter@uevora.pt
+Adsorption:Fig. 5., Fig. 6., Fig. 7., Fig. 8.
+Pore:
+
+MKZ44:
+A. Linares-Solano
+linares@ua.es
+Adsorption:Fig. 1., Fig. 3., Fig. 4., Fig. 5.
+Pore:?
+
+MKZ45:
+Macias-Garcıa
+amacias@materiales.unex.es
+Adsorption:Fig. 1., Fig. 2.
+Pore:?
+
+MKZ46:
+J.J Pis
+jjpis@muniellos.incar.csic.es
+Adsorption:Fig. 6.
+Pore:?
+
+MKZ47:
+Soo-Jin Park
+psjin@pado.krict.re.kr
+Adsorption:Fig. 4.
+Pore:Fig. 5.
+
+MKZ48:
+Badie S Girgis
+girgisbs@hotmail.com
+Adsorption:Fig. 1.
+Pore:Fig. 2.
+
+MKZ49:
+Ōya Asao
+?
+Adsorption:Fig. 3.
+Pore:Fig. 4.
+
+MKZ50:
+Zheng-Ming Wang
+zm-wang@aist.go.jp
+Adsorption:Fig. 2.
+Pore:?
+
+MKZ51:
+Soo-Jin Park
+psjin@krict.re.kr
+Adsorption:Fig. 1., Fig. 3.
+Pore:Fig. 2.
+
+MKZ52:
+Carlos Moreno-Castilla
+cmoreno@ugr.es
+Adsorption:Fig. 1. 
+Pore:?
+
+MKZ53:
+F. Rodrı́guez-Reinoso
+reinoso@ua.es
+Adsorption:Fig. 8.
+Pore:Fig. 4.
+
+MKZ54:
+Colin H. Rochester
+?
+Adsorption:FIG. 1., FIG. 2., FIG. 3., FIG. 6., FIG. 8., FIG. 10.
+Pore:?
+
+MKZ55:
+A Linares-Solano
+linares@ua.es
+Adsorption:Fig. 1.
+Pore:?
+
+
+
+
+
+
+
+
+

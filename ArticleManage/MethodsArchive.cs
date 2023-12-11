@@ -8,11 +8,11 @@ namespace ArticleManage
 {
     internal class MethodsArchive
     {
-        private EnviromentCreator env;
+       
 
-        public MethodsArchive(EnviromentCreator env) 
+        public MethodsArchive() 
         {
-            this.env = env;
+         
         }
 
         //AU Naile Karakehya,
@@ -104,7 +104,7 @@ namespace ArticleManage
                 id++;
                 Article article = new Article();
                 article.Id = id;
-                article.Identificator = risFileName;
+                article.FileName = risFileName;
                 foreach (String line in ris)
                 {
                     if (line.Length > 1)
@@ -210,7 +210,7 @@ namespace ArticleManage
             {
                 for (int i = 0; i < text.Length; i++)
                 {
-                    if (text[i].Contains(article.Identificator))
+                    if (text[i].Contains(article.FileName))
                     {                        
                        
                         article.ContactPerson = text[i + 1].Trim();

@@ -44,7 +44,7 @@ namespace ArticleManage
             foreach (Article article in articles)
             {
 
-                data += article.Identificator + ":" + "\n";
+                data += article.FileName + ":" + "\n";
                 data += "\t" + article.Citation +"\n";
                 data += "\t" + "Adsorption isotherms: " + article.AdsorptionIsotherms + "\n";
                 data += "\t" + "Pore distribution: " + article.PoreDistribution + "\n";                
@@ -60,7 +60,7 @@ namespace ArticleManage
             foreach (Article article in articles)
             {
                 String data = "Email address: " + article.Email + "\n\n" + article.EmailText;
-                all += article.Identificator + "\n" + data + "\n\n\f\n";
+                all += article.FileName + "\n" + data + "\n\n\f\n";
             }
 
             ExportTXTFile(fileName, all);
@@ -72,7 +72,7 @@ namespace ArticleManage
             foreach (Article article in articles)
             {   
                 String data = "Email address: " + article.Email + "\n\n" + article.EmailText;
-                String fileName = article.Identificator+"_email" + ".txt";
+                String fileName = article.FileName+"_email" + ".txt";
                 SaveEmaiTxtFile(fileName, data, no_yes);
             }
 

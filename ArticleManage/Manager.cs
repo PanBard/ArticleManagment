@@ -18,32 +18,32 @@ namespace ArticleManage
         public List<Article> articles_yes;
         public Manager(EnviromentCreator env) 
         {
-            MethodsArchive method = new MethodsArchive(env);
+            MethodsArchive method = new MethodsArchive();
             Exporter export = new Exporter(env);
             Importer import = new Importer();
             Email email = new Email();
 
-            String[] txt_no = import.readTxtFile(env.txtInputFolderPath + "\\niesczytane_contacts.txt");
-            this.articles_no = method.returnArticleWithDataFromRISfiles(env.riscFilesPaths_no, env.RISInputFolderPath_no);
-            this.articles_no = method.insertContactAndFiguresToArticles(txt_no, this.articles_no);
-            this.articles_no = method.returnArticleWithGeneratedCitation(this.articles_no);
-            this.articles_no = email.generateEmailsForArticels(articles_no);
-            export.exportEmails(articles_no, "no");
-            export.exportAllEmailsToTxt(this.articles_no, "niesczytane_all.txt");
-            export.exportInfoToTxtWORD(this.articles_no, "niezczytane_WORD.txt");
+            //String[] txt_no = import.readTxtFile(env.txtInputFolderPath + "\\niesczytane_contacts.txt");
+            //this.articles_no = method.returnArticleWithDataFromRISfiles(env.riscFilesPaths_no, env.RISInputFolderPath_no);
+            //this.articles_no = method.insertContactAndFiguresToArticles(txt_no, this.articles_no);
+            //this.articles_no = method.returnArticleWithGeneratedCitation(this.articles_no);
+            //this.articles_no = email.generateEmailsForArticels(articles_no);
+            //export.exportEmails(articles_no, "no");
+            //export.exportAllEmailsToTxt(this.articles_no, "niesczytane_all.txt");
+            //export.exportInfoToTxtWORD(this.articles_no, "niezczytane_WORD.txt");
 
-            String[] txt_yes = import.readTxtFile(env.txtInputFolderPath+ "\\sczytane_contacts.txt");            
-            this.articles_yes = method.returnArticleWithDataFromRISfiles(env.riscFilesPaths_yes, env.RISInputFolderPath_yes);            
-            this.articles_yes = method.insertContactAndFiguresToArticles(txt_yes, this.articles_yes);
-            this.articles_yes = method.returnArticleWithGeneratedCitation(this.articles_yes);
-            this.articles_yes = email.generateEmailsForArticels(articles_yes);
-            export.exportEmails(articles_yes, "yes");
-            export.exportAllEmailsToTxt(this.articles_yes, "sczytane_all.txt");
-            export.exportInfoToTxtWORD(this.articles_yes, "zczytane_WORD.txt");
+            //String[] txt_yes = import.readTxtFile(env.txtInputFolderPath+ "\\sczytane_contacts.txt");            
+            //this.articles_yes = method.returnArticleWithDataFromRISfiles(env.riscFilesPaths_yes, env.RISInputFolderPath_yes);            
+            //this.articles_yes = method.insertContactAndFiguresToArticles(txt_yes, this.articles_yes);
+            //this.articles_yes = method.returnArticleWithGeneratedCitation(this.articles_yes);
+            //this.articles_yes = email.generateEmailsForArticels(articles_yes);
+            //export.exportEmails(articles_yes, "yes");
+            //export.exportAllEmailsToTxt(this.articles_yes, "sczytane_all.txt");
+            //export.exportInfoToTxtWORD(this.articles_yes, "zczytane_WORD.txt");
 
-            export.ExportJson("niesczytane.json", articles_no);
-            export.ExportJson("sczytane.json", articles_yes);
-            export.SaveExcelFile(articles_no, articles_yes, "12.xlsx");
+            //export.ExportJson("niesczytane.json", articles_no);
+            //export.ExportJson("sczytane.json", articles_yes);
+            //export.SaveExcelFile(articles_no, articles_yes, "12.xlsx");
 
 
 
@@ -78,7 +78,7 @@ namespace ArticleManage
             {   
                 
                 Console.Write(article.Id+" - ");
-                Console.WriteLine(article.Identificator);
+                Console.WriteLine(article.FileName);
 
                 foreach(var item in article.Autors) 
                 {
@@ -102,7 +102,7 @@ namespace ArticleManage
             {
 
                 Console.Write(article.Id + " - ");
-                Console.WriteLine(article.Identificator);
+                Console.WriteLine(article.FileName);
 
                 foreach (var item in article.Autors)
                 {

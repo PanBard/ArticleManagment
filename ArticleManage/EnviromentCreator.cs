@@ -66,7 +66,10 @@ namespace ArticleManage
         }
 
         private String makePathToDir(String folderName)
-        {   
+        {
+            //String main_folder_name = "\\C_sharp_programs_folders\\";
+            //string path_to_Document_folder = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + main_folder_name + folderName);
+
             // This will get the current WORKING directory (i.e. \bin\Debug)
             string workingDirectory = Environment.CurrentDirectory;
             // This will get the current PROJECT directory

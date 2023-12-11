@@ -17,7 +17,7 @@ namespace ArticleManage
         //DO https://doi.org/10.1016/j.diamond.2023.109873.
 
         public int Id { get; set; }
-        public String Identificator { get; set; }
+        public String FileName { get; set; }
         public String ContactPerson { get; set; }
         public String Email { get; set; }
         public String AdsorptionIsotherms { get; set; }

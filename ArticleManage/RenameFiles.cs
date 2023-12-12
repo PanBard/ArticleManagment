@@ -21,7 +21,7 @@ namespace ArticleManage
             //makeNewNameForPDFfilesSimple();
             //makeNewNameForRISfilesSimple();
 
-            showTime();
+            //showTime();
         }
 
         void makeFormalNameForPDFfiles()

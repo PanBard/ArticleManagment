@@ -14,6 +14,7 @@ namespace ArticleManage
 
         public List<String> filesNames { get; set; }
         public List<String> filesPaths {  get; set; }
+        public List<String> insideFolderPaths { get; set; }
 
 
         public Folder(string folderName)
@@ -21,6 +22,7 @@ namespace ArticleManage
 
             this.filesNames = new List<String>();
             this.filesPaths = new List<String>();
+            this.insideFolderPaths = new List<String>();
             this.folderName = folderName;
             this.makePaths();
             this.makeDirIfNotExist(this.folderPath);
@@ -54,7 +56,7 @@ namespace ArticleManage
             DirectoryInfo dir = new DirectoryInfo(this.folderPath);
             FileInfo[] Files = dir.GetFiles();
             DirectoryInfo[] dicts = dir.GetDirectories();
-            if (Files.Length == 0)
+            if (Files.Length == 0 && dicts.Length == 0)
             {
                 Console.Write($" Files inside: {Files.Length}|");
                 Console.WriteLine($" Dir inside: {dicts.Length}");
@@ -72,6 +74,12 @@ namespace ArticleManage
                 {
                     filesPaths.Add(Files[i].FullName);
                 }
+
+                for (int i = 0; i < dicts.Length; i++)
+                {
+                    insideFolderPaths.Add(dicts[i].FullName);
+                }
+
             }
 
         }

@@ -16,6 +16,8 @@ namespace ArticleManage
         public Folder output_folders { get; set; }
         public Folder output_excel { get; set; }
         public Folder input_graph {  get; set; }
+        public Folder plot_digitizer_projects { get; set; }
+        public Folder temp { get; set; }
 
         public FoldersStructure()
         {
@@ -26,6 +28,8 @@ namespace ArticleManage
             this.output_folders = new Folder("output_folders");
             this.output_excel = new Folder("output_excel");
             this.input_graph = new Folder("input_graph");
+            this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
+            this.temp = new Folder("temp");
         }
 
 

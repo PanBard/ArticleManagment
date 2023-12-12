@@ -24,7 +24,7 @@ namespace ArticleManage
         private void SaveExcelFile( String excelFileName)
         {
             MethodsArchive method = new MethodsArchive();
-            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris_files.filesPaths, folders.input_ris_files.folderPath);
+            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath);
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             String excelFilePath = folders.output_excel.folderPath + excelFileName;

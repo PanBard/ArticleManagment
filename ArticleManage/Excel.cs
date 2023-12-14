@@ -18,7 +18,7 @@ namespace ArticleManage
             this.folders = folders;
 
             SaveExcelFileExperiment("elo.xlsx");
-            //SaveExcelFile("all_article.xlsx");
+            SaveExcelFile("all_article.xlsx");
         }
 
 

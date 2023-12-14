@@ -18,7 +18,7 @@ namespace ArticleManage
 
 
             makeFolderForPDFfilesAndCopyToIt();
-            //extractTarFile();
+            //readDataFromProject();
             //showTime();
         }
 
@@ -65,13 +65,43 @@ namespace ArticleManage
                 if ( r == e[0])
                 {
                     String old_path = folders.input_graph.folderPath + graph_name; 
-                    String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "")+"\\"+ graph_name;
+                    String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "")+ "\\graphs\\" + graph_name;
                     //Console.WriteLine($"{graph_name}       -->          {pdfFileName.Replace("... .pdf", "")}");
                     if (!File.Exists(new_path))
                     {
                         System.IO.File.Copy(old_path, new_path);
                     }
                 }
+            }
+        }
+
+        void copyTarPackage(String pdfFileName)
+        {
+            foreach (var file_name in folders.input_graph.filesNames)
+            {
+                if(file_name.Contains(".tar"))
+                {
+                    
+                    var tar_name = file_name.Split(' ');
+                    var t = pdfFileName.Split(' ');
+                    var pdf_name = t[0].ToString() + t[1].ToString();
+                    if (pdf_name == tar_name[0])
+                    {
+                        String old_path = folders.input_graph.folderPath + file_name;
+                        String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs\\" + file_name;
+                        //Console.WriteLine($"{file_name}       -->          {pdfFileName.Replace("... .pdf", "")}");
+                        if (!File.Exists(new_path))
+                        {
+                            System.IO.File.Copy(old_path, new_path);
+                        }
+
+                        extractTarPackages(new_path);
+
+                    }
+
+
+                }
+               
             }
         }
 
@@ -101,6 +131,13 @@ namespace ArticleManage
                     System.IO.Directory.CreateDirectory(path);
                     Console.WriteLine($"Create new folder [{pdf_file}]");
                 }
+                String graph_path = path + "\\" + "graphs";
+                bool exists2 = System.IO.Directory.Exists(graph_path);
+                if (!exists2)
+                {
+                    System.IO.Directory.CreateDirectory(graph_path);
+                    Console.WriteLine($"Create new folder [{graph_path}]");
+                }
                 //else Console.WriteLine($"Folder exist [{pdf_file}]");
 
                 String old_path = folders.output_pdf.folderPath + pdf_file;
@@ -110,49 +147,70 @@ namespace ArticleManage
                     System.IO.File.Copy(old_path, new_path);
                 }
                 copyGraph(pdf_file);
+                copyTarPackage(pdf_file);
+                readDataFromProject(pdf_file);
+                
             }
-            
+            Console.WriteLine($"Making folders for each {folders.input_pdf.filesNames.Count} articles");
         }
 
-        private void extractTarFile()
+        private void readDataFromProject(String pdfFileName)
         {
+            var t = pdfFileName.Split(' ');
+            var pdf_name = t[0].ToString() + t[1].ToString();
 
-            using (StreamReader file = File.OpenText(folders.temp.insideFolderPaths.First() + "\\wpd.json"))
-            using (JsonTextReader reader = new JsonTextReader(file))
+            foreach (var path in folders.temp.insideFolderPaths)
             {
-                JObject o2 = (JObject)JToken.ReadFrom(reader);
-                var o = o2["datasetColl"];
-                String data = "";
-                foreach (var item in o)
+                String elo = path + " ";
+                if(elo.Contains(pdf_name + " ") || path.Contains(pdf_name + "_"))
                 {
-                    Console.WriteLine(item["name"]);
-                    data += item["name"]+"\n";
-                    foreach (var item1 in item["data"])
+                    using (StreamReader file = File.OpenText(path + "\\wpd.json"))
+
+                    using (JsonTextReader reader = new JsonTextReader(file))
                     {
-                        Console.WriteLine($"x: {item1["value"][0]} y: {item1["value"][1]}");
-                        data += $"{item1["value"][0]} , {item1["value"][1]}" + "\n";
+                        JObject o2 = (JObject)JToken.ReadFrom(reader);
+                        var o = o2["datasetColl"];
+                        String data = "";
+                        foreach (var item in o)
+                        {
+                            //Console.WriteLine(item["name"]);
+                            data += item["name"]+"," + "\n" +"X,Y" + "\n";
+                            foreach (var item1 in item["data"])
+                            {
+                                //Console.WriteLine($"x: {item1["value"][0]} y: {item1["value"][1]}");
+                                data += $"{String.Format("{0:0.0000}",item1["value"][0])} , {String.Format("{0:0.0000}", item1["value"][1])}" + "\n";
+                            }
+
+                            String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs" ;                            
+                            String nameTxt = csv_folder_path + "\\" + item["name"] + ".csv";
+                            File.WriteAllText(nameTxt, data);
+                            data = "";
+                        }
+                        //Console.WriteLine(o[0]);
                     }
-                    String nameTxt = folders.temp.folderPath + item["name"] +".txt";
-                    File.WriteAllText(nameTxt, data);
-                    data = "";
+
                 }
-                //Console.WriteLine(o[0]);
+               
+
             }
+           
+                           
+        }
 
-            
-
-
-            //try
-            //{
-            //    TarFile.ExtractToDirectory(folders.plot_digitizer_projects.filesPaths.First(), folders.temp.folderPath, false);
-            //}
-            //catch (IOException e)
-            //{
-
-            //    Console.WriteLine("failed to extraxt archive");
-            //    Console.WriteLine($"{e.Message}");
-            //}
-
+        private void extractTarPackages(String path)
+        {
+            if (!Directory.Exists(path))
+            {
+                try
+                {
+                    //TarFile.ExtractToDirectory(folders.plot_digitizer_projects.filesPaths.First(), folders.temp.folderPath, false);
+                    TarFile.ExtractToDirectory(path, folders.temp.folderPath, false);
+                }
+                catch (IOException e)
+                {
+                    //Console.WriteLine($"failed to extraxt archive -> {e.Message}");
+                }
+            }
         }
 
 

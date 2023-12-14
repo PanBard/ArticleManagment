@@ -1,4 +1,7 @@
-﻿using OfficeOpenXml;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using OfficeOpenXml;
+using OfficeOpenXml.Drawing.Chart;
+using OfficeOpenXml.Drawing.Chart.Style;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +17,18 @@ namespace ArticleManage
         {
             this.folders = folders;
 
-
-            SaveExcelFile("all_article.xlsx");
+            SaveExcelFileExperiment("elo.xlsx");
+            //SaveExcelFile("all_article.xlsx");
         }
 
- 
 
+        private void DeleteIfExists(FileInfo file)
+        {
+            if (file.Exists)
+            {
+                file.Delete();
+            }
+        }
 
         private void SaveExcelFile( String excelFileName)
         {
@@ -64,12 +73,97 @@ namespace ArticleManage
             }
         }
 
-        private void DeleteIfExists(FileInfo file)
+        private void SaveExcelFileExperiment(String excelFileName)
         {
-            if (file.Exists)
+            int c = 0;
+            foreach (var item in folders.output_folders.insideFolderPaths)
             {
-                file.Delete();
+                if(Directory.Exists(item + "\\graphs")) 
+                {
+                    DirectoryInfo dir = new DirectoryInfo(item + "\\graphs");
+                    FileInfo[] Files = dir.GetFiles();
+                    var folder_name = item.Replace(folders.output_folders.folderPath, "");
+
+                    List<string> files = new List<string>();
+                    foreach (var file in Files)
+                    {
+                        if (file.Name.Contains(".csv"))
+                        {
+                            files.Add(file.FullName);
+                        }
+                    }
+                    if (files.Count > 0)
+                    {
+                        var t = folder_name.Split(' ');
+                        var pdf_name = t[0].ToString() + t[1].ToString();
+                        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+                        String excelFilePath = item +"\\"+ pdf_name + "_all_graphs_excel.xlsx";
+                        Console.WriteLine(excelFilePath);
+                        var file = new FileInfo(excelFilePath);
+                        DeleteIfExists(file); //delete file if exist
+                        var excelTextFormat = new ExcelTextFormat();
+                        excelTextFormat.Delimiter = ',';
+                        excelTextFormat.EOL = "\n";
+                        
+
+                        using (var package = new ExcelPackage(file))
+                        {
+                            foreach (var csv_file_path in files)
+                            {
+                                String txt = File.ReadAllText(csv_file_path);
+                                Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
+                                package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
+                                var testWorksheet = package.Workbook.Worksheets[csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")];
+                                ExcelChart chart = testWorksheet.Drawings.AddChart("chart", eChartType.XYScatter);
+                                chart.XAxis.Title.Text = "Relative pressure"; //give label to x-axis of chart  
+                                chart.XAxis.Title.Font.Size = 12;
+                                
+                                chart.YAxis.Title.Text = "Volume of gas adsorbed"; //give label to Y-axis of chart  
+                                chart.YAxis.Title.Font.Size = 12;
+                                chart.YAxis.Title.Rotation = 270;
+                                chart.Legend.Remove();
+                                chart.SetSize(600, 400);
+                                chart.SetPosition(1, 0, 5, 0);
+                                //Set style 9 and Colorful Palette 3
+                                chart.StyleManager.SetChartStyle(ePresetChartStyle.Area3dChartStyle1, ePresetChartColors.ColorfulPalette1);
+                                chart.Title.Text = $"Izoterma adsorpcji probki {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}";
+                                chart.Title.Font.Size = 14;
+                                var series = chart.Series.Add(testWorksheet.Cells["B3:B50"], testWorksheet.Cells["A3:A50"]);
+                            }
+                            package.Save();
+                            Console.WriteLine($"Saved file: {excelFileName}");
+                        }
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("-----------------------");
+                    }
+
+                    c++;
+                }
+                
             }
+
+            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            //String excelFilePath = folders.output_excel.folderPath + excelFileName;
+            //var file = new FileInfo(excelFilePath);
+            //DeleteIfExists(file); //delete file if exist
+
+            //using (var package = new ExcelPackage(file))
+            //{
+            //    var workSheet = package.Workbook.Worksheets.Add("artykuly");
+            //    var rangeCells = workSheet.Cells["A2"].LoadFromText(, true); //start from A2 cell ;true for take name of property and put it as header column
+            //    rangeCells.AutoFitColumns(); //expand column if content is big
+
+            //    var workSheet2 = package.Workbook.Worksheets.Add("artykuly_sczytane");
+            //    var rangeCells2 = workSheet2.Cells["A2"].LoadFromCollection(readed_articles, true); //start from A2 cell ;true for take name of property and put it as header column
+
+
+            //    package.SaveAsync();
+            //    Console.WriteLine($"Saved file: {excelFileName}");
+            //}
         }
 
 

@@ -110,6 +110,13 @@ namespace ArticleManage
                         {
                             foreach (var csv_file_path in files)
                             {
+                                string[] name = csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+                                var calibrate = name[3].Split('-');
+                                if (!name[3].Contains('-') )
+                                {
+                                    calibrate = name[4].Split('-');
+                                }
+                                
                                 String txt = File.ReadAllText(csv_file_path);
                                 Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
                                 package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
@@ -121,14 +128,20 @@ namespace ArticleManage
                                 chart.YAxis.Title.Text = "Volume of gas adsorbed"; //give label to Y-axis of chart  
                                 chart.YAxis.Title.Font.Size = 12;
                                 chart.YAxis.Title.Rotation = 270;
+                                chart.YAxis.MaxValue = float.Parse(calibrate[3]);
+                                chart.YAxis.MinValue = float.Parse(calibrate[2]);
+                                chart.XAxis.MaxValue = float.Parse(calibrate[1]);
+                                chart.XAxis.MinValue = float.Parse( calibrate[0]);
                                 chart.Legend.Remove();
                                 chart.SetSize(600, 400);
                                 chart.SetPosition(1, 0, 5, 0);
                                 //Set style 9 and Colorful Palette 3
                                 chart.StyleManager.SetChartStyle(ePresetChartStyle.Area3dChartStyle1, ePresetChartColors.ColorfulPalette1);
-                                chart.Title.Text = $"Izoterma adsorpcji probki {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}";
+                               
+                                string chart_title = $"Izoterma adsorpcji probki {name[2]} z wykresu '{name[0]} {name[1]}' ";
+                                chart.Title.Text = chart_title;
                                 chart.Title.Font.Size = 14;
-                                var series = chart.Series.Add(testWorksheet.Cells["B3:B50"], testWorksheet.Cells["A3:A50"]);
+                                var series = chart.Series.Add(testWorksheet.Cells["B3:B70"], testWorksheet.Cells["A3:A70"]);
                             }
                             package.Save();
                             Console.WriteLine($"Saved file: {excelFileName}");

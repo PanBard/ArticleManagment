@@ -164,17 +164,37 @@ namespace ArticleManage
                 String elo = path + " ";
                 if(elo.Contains(pdf_name + " ") || path.Contains(pdf_name + "_"))
                 {
+                    //[[[[[[[[[[[[[[[[
+                    DirectoryInfo dir = new DirectoryInfo(path);
+                    FileInfo[] Files = dir.GetFiles();
+                    string graph_number = "";
+                    foreach (var item in Files)
+                    {
+                        if(item.Name.Contains(".bmp"))
+                        {
+                            string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
+                            graph_number = temp[1];
+                            Console.WriteLine(graph_number);
+                        }
+                    }
+                    //[[[[[[[[[[[[[[[[
                     using (StreamReader file = File.OpenText(path + "\\wpd.json"))
 
                     using (JsonTextReader reader = new JsonTextReader(file))
                     {
                         JObject o2 = (JObject)JToken.ReadFrom(reader);
                         var o = o2["datasetColl"];
+                        var Calibration_y1 = o2["axesColl"][0]["calibrationPoints"][0]["dy"];
+                        var Calibration_y2 = o2["axesColl"][0]["calibrationPoints"][3]["dy"];
+                        var Calibration_x1 = o2["axesColl"][0]["calibrationPoints"][0]["dx"];
+                        var Calibration_x2 = o2["axesColl"][0]["calibrationPoints"][3]["dx"];
+                        Console.WriteLine($"x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
                         String data = "";
                         foreach (var item in o)
                         {
                             //Console.WriteLine(item["name"]);
                             data += item["name"]+"," + "\n" +"X,Y" + "\n";
+                            
                             foreach (var item1 in item["data"])
                             {
                                 //Console.WriteLine($"x: {item1["value"][0]} y: {item1["value"][1]}");
@@ -182,7 +202,7 @@ namespace ArticleManage
                             }
 
                             String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs" ;                            
-                            String nameTxt = csv_folder_path + "\\" + item["name"] + ".csv";
+                            String nameTxt = csv_folder_path + "\\"+"Figure "+ graph_number+" " + item["name"] +" " + $"[{Calibration_x1}-{Calibration_x2}-{Calibration_y1}-{Calibration_y2}]" + ".csv";
                             File.WriteAllText(nameTxt, data);
                             data = "";
                         }

@@ -16,7 +16,7 @@ namespace ArticleManage
             this.folders = folders;
 
 
-            //makeFormalNameForPDFfiles();
+            makeFormalNameForPDFfiles();
             //makeNewNameForRISfiles();
             //makeNewNameForPDFfilesSimple();
             //makeNewNameForRISfilesSimple();

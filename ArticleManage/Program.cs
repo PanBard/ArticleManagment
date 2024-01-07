@@ -9,8 +9,8 @@ internal class Program
 
 
         FoldersStructure folders = new FoldersStructure();
-        //RenameFiles worker = new RenameFiles(folders);
-       
+        RenameFiles worker = new RenameFiles(folders);
+
         MakerFolderForEachPDF folderMaker = new MakerFolderForEachPDF(folders);
         Excel excel = new Excel(folders);
 

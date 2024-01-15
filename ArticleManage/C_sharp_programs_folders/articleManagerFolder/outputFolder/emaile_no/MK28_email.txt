@@ -1,7 +1,0 @@
-Email address: rwrobel@zut.edu.pl
-
-Dear R.J. Wróbel,
-I am writing to kindly request access to the data presented in your article: [Kaliszewski,  M.; Zgrzebnicki,  M.; Kałamaga,  A.; Pinjara,  S.; Wróbel,  R. Commercial Kevlar derived activated carbons for CO and CH sorption, Polish Journal of Chemical Technology, 23, 2021, 81, https://doi.org/doi:10.2478/pjct-2021-0021], specifically featured in  Figure 3., Figure 4. I am particularly interested in obtaining the adsorption isotherms. I am seeking your permission to use this data for testing a new tool for analysing the porous structure of carbonous adsorbents. The results of these tests will be used for publication in international scientific journals.
-I would like to assure you that I will diligently cite your mentioned article and include appropriate acknowledgments for granting access to the data. Your kind consideration of this request would be greatly appreciated. Additionally, I kindly ask for the provision of the adsorption isotherms in numerical format, preferably in a text file (txt) or spreadsheet (xls), which will facilitate effective analysis.
-I am thankful in advance for your understanding and support. I look forward to a positive response to my request.
-Sincerely,

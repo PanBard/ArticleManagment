@@ -59,7 +59,7 @@ namespace ArticleManage
         {
             foreach (var graph_name in folders.input_graph.filesNames)
             {
-                var e = graph_name.Split(' ');                
+                var e = graph_name.Split('_');                
                 var t = pdfFileName.Split(' ');
                 var r = t[0].ToString() + t[1].ToString();
                 if ( r == e[0])
@@ -82,7 +82,7 @@ namespace ArticleManage
                 if(file_name.Contains(".tar"))
                 {
                     
-                    var tar_name = file_name.Split(' ');
+                    var tar_name = file_name.Split('_');
                     var t = pdfFileName.Split(' ');
                     var pdf_name = t[0].ToString() + t[1].ToString();
                     if (pdf_name == tar_name[0])
@@ -164,6 +164,7 @@ namespace ArticleManage
                 String elo = path + " ";
                 if(elo.Contains(pdf_name + " ") || path.Contains(pdf_name + "_"))
                 {
+
                     //[[[[[[[[[[[[[[[[
                     DirectoryInfo dir = new DirectoryInfo(path);
                     FileInfo[] Files = dir.GetFiles();

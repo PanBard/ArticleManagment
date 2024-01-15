@@ -1,7 +1,0 @@
-Email address: tascon@incar.csic.es
-
-Dear J.M.D. Tascón,
-I am writing to kindly request access to the data presented in your article: [Blanco López, M.; Martı́nez-Alonso, A.; Tascón, J. Microporous texture of activated carbon fibres prepared from Nomex aramid fibres, Microporous and Mesoporous Materials, 34, 2000, 171, https://doi.org/10.1016/S1387-1811(99)00171-7], specifically featured in Fig. 2., Fig. 4. I am particularly interested in obtaining the adsorption isotherms. I am seeking your permission to use this data for testing a new tool for analysing the porous structure of carbonous adsorbents. The results of these tests will be used for publication in international scientific journals.
-I would like to assure you that I will diligently cite your mentioned article and include appropriate acknowledgments for granting access to the data. Your kind consideration of this request would be greatly appreciated. Additionally, I kindly ask for the provision of the adsorption isotherms in numerical format, preferably in a text file (txt) or spreadsheet (xls), which will facilitate effective analysis.
-I am thankful in advance for your understanding and support. I look forward to a positive response to my request.
-Sincerely,

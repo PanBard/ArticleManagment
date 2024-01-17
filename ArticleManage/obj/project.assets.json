@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Aspose.Zip/23.12.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Aspose.Zip.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aspose.Zip.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/2.20.0": {
         "type": "package",
         "dependencies": {
@@ -434,6 +450,29 @@
     }
   },
   "libraries": {
+    "Aspose.Zip/23.12.0": {
+      "sha512": "9tYTZNRkwYc4vZk/1k8ZzL6in+a2I5lxA9SakyQ3aJJFFClU+stT4Z5uygwj0MjEHXlzB6MUlhovAPxyH6MjwQ==",
+      "type": "package",
+      "path": "aspose.zip/23.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Help/Aspose.ZIP.chm",
+        "License/Aspose_End-User-License-Agreement.txt",
+        "License/thirdpartylicenses.Aspose.ZIP.for.NET.pdf",
+        "aspose.zip.23.12.0.nupkg.sha512",
+        "aspose.zip.nuspec",
+        "docs/README.md",
+        "images/aspose_zip-for-net.png",
+        "lib/net20/Aspose.Zip.dll",
+        "lib/net20/Aspose.Zip.xml",
+        "lib/net40/Aspose.Zip.dll",
+        "lib/net40/Aspose.Zip.xml",
+        "lib/netstandard2.0/Aspose.Zip.dll",
+        "lib/netstandard2.0/Aspose.Zip.xml",
+        "lib/readme.txt"
+      ]
+    },
     "DocumentFormat.OpenXml/2.20.0": {
       "sha512": "+oFMsEppo/W6KpGTRXaJl2jTFYn9zeon4FaZuDoCijQ1/0JaPENaCef7d4Y3f8v116eKhVBwd4Ya+/NDglxkjw==",
       "type": "package",
@@ -1195,6 +1234,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Aspose.Zip >= 23.12.0",
       "DocumentFormat.OpenXml >= 2.20.0",
       "EPPlus >= 7.0.0",
       "Microsoft.Office.Interop.Word >= 15.0.4797.1004",
@@ -1245,6 +1285,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Aspose.Zip": {
+            "target": "Package",
+            "version": "[23.12.0, )"
+          },
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[2.20.0, )"

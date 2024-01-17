@@ -24,11 +24,11 @@ namespace ArticleManage
             this.input_pdf = new Folder("input_pdf");
             this.input_ris = new Folder("input_ris");
             this.output_pdf = new Folder("output_pdf");
-            this.output_ris = new Folder("output_ris");
+            //this.output_ris = new Folder("output_ris");
             this.output_folders = new Folder("output_folders");
             this.output_excel = new Folder("output_excel");
             this.input_graph = new Folder("input_graph");
-            this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
+            //this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
             this.temp = new Folder("temp");
         }
 

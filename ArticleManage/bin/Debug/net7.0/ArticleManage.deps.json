@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "ArticleManage/1.0.0": {
         "dependencies": {
+          "Aspose.Zip": "23.12.0",
           "DocumentFormat.OpenXml": "2.20.0",
           "EPPlus": "7.0.0",
           "Microsoft.Office.Interop.Word": "15.0.4797.1004",
@@ -16,6 +17,17 @@
         },
         "runtime": {
           "ArticleManage.dll": {}
+        }
+      },
+      "Aspose.Zip/23.12.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aspose.Zip.dll": {
+            "assemblyVersion": "23.12.0.0",
+            "fileVersion": "23.12.0.0"
+          }
         }
       },
       "DocumentFormat.OpenXml/2.20.0": {
@@ -269,6 +281,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Aspose.Zip/23.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9tYTZNRkwYc4vZk/1k8ZzL6in+a2I5lxA9SakyQ3aJJFFClU+stT4Z5uygwj0MjEHXlzB6MUlhovAPxyH6MjwQ==",
+      "path": "aspose.zip/23.12.0",
+      "hashPath": "aspose.zip.23.12.0.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/2.20.0": {
       "type": "package",

@@ -6,6 +6,7 @@ using System.Formats.Tar;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aspose.Zip.Rar;
 
 namespace ArticleManage
 {
@@ -62,7 +63,7 @@ namespace ArticleManage
                 var e = graph_name.Split('_');                
                 var t = pdfFileName.Split(' ');
                 var r = t[0].ToString() + t[1].ToString();
-                if ( r == e[0])
+                if ( r == e[0] && !graph_name.Contains(".rar"))
                 {
                     String old_path = folders.input_graph.folderPath + graph_name; 
                     String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "")+ "\\graphs\\" + graph_name;
@@ -79,7 +80,8 @@ namespace ArticleManage
         {
             foreach (var file_name in folders.input_graph.filesNames)
             {
-                if(file_name.Contains(".tar"))
+
+                if(file_name.Contains(".tar") )
                 {
                     
                     var tar_name = file_name.Split('_');
@@ -87,21 +89,34 @@ namespace ArticleManage
                     var pdf_name = t[0].ToString() + t[1].ToString();
                     if (pdf_name == tar_name[0])
                     {
-                        String old_path = folders.input_graph.folderPath + file_name;
-                        String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs\\" + file_name;
-                        //Console.WriteLine($"{file_name}       -->          {pdfFileName.Replace("... .pdf", "")}");
-                        if (!File.Exists(new_path))
-                        {
-                            System.IO.File.Copy(old_path, new_path);
-                        }
+                        Console.WriteLine($"!{file_name}:  {!file_name.Contains("read")}");
+                        Console.WriteLine($"{file_name}:  {file_name.Contains("read")}");
+                       
+                            String old_path = folders.input_graph.folderPath + file_name;
+                            String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs\\" + file_name;
+                            //Console.WriteLine($"{file_name}       -->          {pdfFileName.Replace("... .pdf", "")}");
+                            if (!File.Exists(new_path))
+                            {
+                                System.IO.File.Copy(old_path, new_path);
+                            }
 
-                        extractTarPackages(new_path);
-
+                            extractTarPackagesToTempFolder(new_path);                                               
                     }
-
-
                 }
-               
+
+                if (file_name.Contains(".rar"))
+                {
+                    var t = pdfFileName.Split(' ');
+                    var pdf_name = t[0].ToString() + t[1].ToString();
+                    var rar_name = file_name.Split('_');
+                    if (pdf_name == rar_name[0])
+                    {
+                        String rar_file_path = folders.input_graph.folderPath + file_name;
+                        String path_to_extract_rar_file = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs";
+                        extractReadedDataTarPackagesToOutputFolder(path_to_extract_rar_file, rar_file_path);
+                    }
+                }
+
             }
         }
 
@@ -174,7 +189,10 @@ namespace ArticleManage
                         if(item.Name.Contains(".bmp"))
                         {
                             string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
-                            graph_number = temp[1];
+                            string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
+                            if(temp.Length > 1) { graph_number = temp[1];  }
+                            else { graph_number = temp2[1]; }
+                            //graph_number = temp[1];
                             Console.WriteLine(graph_number);
                         }
                     }
@@ -218,7 +236,7 @@ namespace ArticleManage
                            
         }
 
-        private void extractTarPackages(String path)
+        private void extractTarPackagesToTempFolder(String path)
         {
             if (!Directory.Exists(path))
             {
@@ -232,6 +250,17 @@ namespace ArticleManage
                     //Console.WriteLine($"failed to extraxt archive -> {e.Message}");
                 }
             }
+        }
+
+        private void extractReadedDataTarPackagesToOutputFolder(String path_to_extract_rar_file, String rar_file_path)
+        {
+            if (!Directory.Exists(rar_file_path))
+            {
+              using (RarArchive archive = new RarArchive(rar_file_path))
+                {
+                    archive.ExtractToDirectory(path_to_extract_rar_file);
+                }
+            }                        
         }
 
 

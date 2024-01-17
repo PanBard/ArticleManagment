@@ -37,3 +37,4 @@ C:\Users\Jan\source\repos\ArticleManage\ArticleManage\obj\Debug\net7.0\refint\Ar
 C:\Users\Jan\source\repos\ArticleManage\ArticleManage\obj\Debug\net7.0\ArticleManage.pdb
 C:\Users\Jan\source\repos\ArticleManage\ArticleManage\obj\Debug\net7.0\ArticleManage.genruntimeconfig.cache
 C:\Users\Jan\source\repos\ArticleManage\ArticleManage\obj\Debug\net7.0\ref\ArticleManage.dll
+C:\Users\Jan\source\repos\ArticleManage\ArticleManage\bin\Debug\net7.0\Aspose.Zip.dll

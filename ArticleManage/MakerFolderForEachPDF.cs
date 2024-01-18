@@ -88,10 +88,7 @@ namespace ArticleManage
                     var t = pdfFileName.Split(' ');
                     var pdf_name = t[0].ToString() + t[1].ToString();
                     if (pdf_name == tar_name[0])
-                    {
-                        Console.WriteLine($"!{file_name}:  {!file_name.Contains("read")}");
-                        Console.WriteLine($"{file_name}:  {file_name.Contains("read")}");
-                       
+                    {                                              
                             String old_path = folders.input_graph.folderPath + file_name;
                             String new_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs\\" + file_name;
                             //Console.WriteLine($"{file_name}       -->          {pdfFileName.Replace("... .pdf", "")}");
@@ -193,7 +190,7 @@ namespace ArticleManage
                             if(temp.Length > 1) { graph_number = temp[1];  }
                             else { graph_number = temp2[1]; }
                             //graph_number = temp[1];
-                            Console.WriteLine(graph_number);
+                            //Console.WriteLine(graph_number);
                         }
                     }
                     //[[[[[[[[[[[[[[[[
@@ -207,7 +204,7 @@ namespace ArticleManage
                         var Calibration_y2 = o2["axesColl"][0]["calibrationPoints"][3]["dy"];
                         var Calibration_x1 = o2["axesColl"][0]["calibrationPoints"][0]["dx"];
                         var Calibration_x2 = o2["axesColl"][0]["calibrationPoints"][3]["dx"];
-                        Console.WriteLine($"x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
+                        Console.WriteLine($"{pdf_name} ->  x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
                         String data = "";
                         foreach (var item in o)
                         {
@@ -221,7 +218,7 @@ namespace ArticleManage
                             }
 
                             String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs" ;                            
-                            String nameTxt = csv_folder_path + "\\"+"Figure "+ graph_number+" " + item["name"] +" " + $"[{Calibration_x1}-{Calibration_x2}-{Calibration_y1}-{Calibration_y2}]" + ".csv";
+                            String nameTxt = csv_folder_path + "\\"+"Figure "+ graph_number+" " + item["name"] +" " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
                             File.WriteAllText(nameTxt, data);
                             data = "";
                         }

@@ -111,12 +111,13 @@ namespace ArticleManage
                             foreach (var csv_file_path in files)
                             {
                                 string[] name = csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
-                                var calibrate = name[3].Split('-');
-                                if (!name[3].Contains('-') )
+                                var calibrate = name[3].Split('&');
+                                if (!name[3].Contains('&') )
                                 {
-                                    calibrate = name[4].Split('-');
+                                    calibrate = name[4].Split('&');
                                 }
                                 
+                                calibrate.ToList().ForEach(x => Console.Write(x+", "));
                                 String txt = File.ReadAllText(csv_file_path);
                                 Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
                                 package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
@@ -151,7 +152,7 @@ namespace ArticleManage
                     }
                     else
                     {
-                        Console.WriteLine("-----------------------");
+                        Console.WriteLine($"files.Count > 0 -----------------------> {folder_name}");
                     }
 
                     c++;

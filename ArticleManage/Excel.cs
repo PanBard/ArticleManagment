@@ -17,8 +17,8 @@ namespace ArticleManage
         {
             this.folders = folders;
 
-            SaveExcelFileExperiment("elo.xlsx");
-            SaveExcelFile("all_article.xlsx");
+            SaveExcelFileExperiment();
+            SaveSummaryExcelFile("all_articles.xlsx");
         }
 
 
@@ -30,7 +30,7 @@ namespace ArticleManage
             }
         }
 
-        private void SaveExcelFile( String excelFileName)
+        private void SaveSummaryExcelFile( String excelFileName)
         {
             MethodsArchive method = new MethodsArchive();
             var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath);
@@ -73,7 +73,7 @@ namespace ArticleManage
             }
         }
 
-        private void SaveExcelFileExperiment(String excelFileName)
+        private void SaveExcelFileExperiment( )
         {
             int c = 0;
             foreach (var item in folders.output_folders.insideFolderPaths)
@@ -145,7 +145,7 @@ namespace ArticleManage
                                 var series = chart.Series.Add(testWorksheet.Cells["B3:B70"], testWorksheet.Cells["A3:A70"]);
                             }
                             package.Save();
-                            Console.WriteLine($"Saved file: {excelFileName}");
+                            
                         }
 
 

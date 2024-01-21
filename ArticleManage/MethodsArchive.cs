@@ -198,6 +198,15 @@ namespace ArticleManage
             return articles;
         }
 
+        public List<Article> returnArticleWithAllData(List<String> filePaths, String dirPath)
+        {
+            var articles = returnArticleWithDataFromRISfiles(filePaths, dirPath);
+
+
+
+            return articles;
+        }
+
         /// <summary>
         /// identificatior = "MK" or "MKZ"
         /// </summary>

@@ -43,7 +43,7 @@ namespace ArticleManage
 
             //export.ExportJson("niesczytane.json", articles_no);
             //export.ExportJson("sczytane.json", articles_yes);
-            //export.SaveExcelFile(articles_no, articles_yes, "12.xlsx");
+            //export.SaveSummaryExcelFile(articles_no, articles_yes, "12.xlsx");
 
 
 
@@ -55,11 +55,11 @@ namespace ArticleManage
             //this.articles = method.convertTxtFile_toObject_niesczytane(txt);
             //export.ExportJson("article.json", this.articles);
             //readSerializedFile(this.serializeFilePath);
-            //export.SaveExcelFile(articles,"");
+            //export.SaveSummaryExcelFile(articles,"");
             //method.updateArticle_sczytane(articles);
             //method.updateArticle_niesczytane(articles);
-            //SaveExcelFile(articles, "excel_niesczytane.xlsx");
-            //SaveExcelFile(articles, "excel_sczytane.xlsx");
+            //SaveSummaryExcelFile(articles, "excel_niesczytane.xlsx");
+            //SaveSummaryExcelFile(articles, "excel_sczytane.xlsx");
             //niesczytane_get_contact_adreses_and_fig_numbers();
             //method.sczytane_get_contact_adreses_and_fig_numbers(articles);       
         }

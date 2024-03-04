@@ -33,7 +33,8 @@ namespace ArticleManage
         private void SaveSummaryExcelFile( String excelFileName)
         {
             MethodsArchive method = new MethodsArchive();
-            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath);
+            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
+            //var articles2 = method.returnArticleWithAllData(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             String excelFilePath = folders.output_excel.folderPath + excelFileName;
@@ -53,17 +54,21 @@ namespace ArticleManage
 
                 workSheet.Row(2).Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
                 workSheet.Row(2).Style.Font.Bold = true;
-                workSheet.Column(1).Width = 3;
+                workSheet.Column(1).Width = 5;
                 workSheet.Column(2).Width = 10;
-                for (int i = 3; i <= 6; i++)
-                {
-                    workSheet.Column(i).Width = 20;
-                }
-                for (int i = 7; i < 14; i++)
+                workSheet.Column(3).Width = 50;
+                workSheet.Column(4).Width = 15;
+                workSheet.Column(5).Width = 45;
+                workSheet.Column(6).Width = 45;
+                //for (int i = 3; i <= 6; i++)
+                //{
+                //    workSheet.Column(i).Width = 10;
+                //}
+                for (int i = 7; i < 12; i++)
                 {
                     workSheet.Column(i).Width = 8;
                 }
-                for (int i = 14; i <= 20; i++)
+                for (int i = 12; i <= 20; i++)
                 {
                     workSheet.Column(i).Width = 25;
                 }
@@ -98,61 +103,64 @@ namespace ArticleManage
                         var pdf_name = t[0].ToString() + t[1].ToString();
                         ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
                         String excelFilePath = item +"\\"+ pdf_name + "_all_graphs_excel.xlsx";
-                        Console.WriteLine(excelFilePath);
+                        //Console.WriteLine(excelFilePath);
                         var file = new FileInfo(excelFilePath);
                         DeleteIfExists(file); //delete file if exist
                         var excelTextFormat = new ExcelTextFormat();
                         excelTextFormat.Delimiter = ',';
                         excelTextFormat.EOL = "\n";
-                        
 
-                        using (var package = new ExcelPackage(file))
+                        if (!File.Exists(excelFilePath))
                         {
-                            foreach (var csv_file_path in files)
+                            using (var package = new ExcelPackage(file))
                             {
-                                string[] name = csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
-                                var calibrate = name[3].Split('&');
-                                if (!name[3].Contains('&') )
+                                foreach (var csv_file_path in files)
                                 {
-                                    calibrate = name[4].Split('&');
+                                    string[] name = csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+                                    var calibrate = name[3].Split('&');
+                                    if (!name[3].Contains('&'))
+                                    {
+                                        calibrate = name[4].Split('&');
+                                    }
+
+                                    //calibrate.ToList().ForEach(x => Console.Write(x+", "));
+                                    String txt = File.ReadAllText(csv_file_path);
+                                    //Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
+                                    package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
+                                    var testWorksheet = package.Workbook.Worksheets[csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")];
+                                    ExcelChart chart = testWorksheet.Drawings.AddChart("chart", eChartType.XYScatter);
+                                    chart.XAxis.Title.Text = "Relative pressure"; //give label to x-axis of chart  
+                                    chart.XAxis.Title.Font.Size = 12;
+
+                                    chart.YAxis.Title.Text = "Volume of gas adsorbed"; //give label to Y-axis of chart  
+                                    chart.YAxis.Title.Font.Size = 12;
+                                    chart.YAxis.Title.Rotation = 270;
+                                    chart.YAxis.MaxValue = float.Parse(calibrate[3]);
+                                    chart.YAxis.MinValue = float.Parse(calibrate[2]);
+                                    chart.XAxis.MaxValue = float.Parse(calibrate[1]);
+                                    chart.XAxis.MinValue = float.Parse(calibrate[0]);
+                                    chart.Legend.Remove();
+                                    chart.SetSize(600, 400);
+                                    chart.SetPosition(1, 0, 5, 0);
+                                    //Set style 9 and Colorful Palette 3
+                                    chart.StyleManager.SetChartStyle(ePresetChartStyle.Area3dChartStyle1, ePresetChartColors.ColorfulPalette1);
+
+                                    string chart_title = $"Izoterma adsorpcji probki {name[2]} z wykresu '{name[0]} {name[1]}' ";
+                                    chart.Title.Text = chart_title;
+                                    chart.Title.Font.Size = 14;
+                                    var series = chart.Series.Add(testWorksheet.Cells["B3:B70"], testWorksheet.Cells["A3:A70"]);
                                 }
-                                
-                                calibrate.ToList().ForEach(x => Console.Write(x+", "));
-                                String txt = File.ReadAllText(csv_file_path);
-                                Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
-                                package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
-                                var testWorksheet = package.Workbook.Worksheets[csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")];
-                                ExcelChart chart = testWorksheet.Drawings.AddChart("chart", eChartType.XYScatter);
-                                chart.XAxis.Title.Text = "Relative pressure"; //give label to x-axis of chart  
-                                chart.XAxis.Title.Font.Size = 12;
-                                
-                                chart.YAxis.Title.Text = "Volume of gas adsorbed"; //give label to Y-axis of chart  
-                                chart.YAxis.Title.Font.Size = 12;
-                                chart.YAxis.Title.Rotation = 270;
-                                chart.YAxis.MaxValue = float.Parse(calibrate[3]);
-                                chart.YAxis.MinValue = float.Parse(calibrate[2]);
-                                chart.XAxis.MaxValue = float.Parse(calibrate[1]);
-                                chart.XAxis.MinValue = float.Parse( calibrate[0]);
-                                chart.Legend.Remove();
-                                chart.SetSize(600, 400);
-                                chart.SetPosition(1, 0, 5, 0);
-                                //Set style 9 and Colorful Palette 3
-                                chart.StyleManager.SetChartStyle(ePresetChartStyle.Area3dChartStyle1, ePresetChartColors.ColorfulPalette1);
-                               
-                                string chart_title = $"Izoterma adsorpcji probki {name[2]} z wykresu '{name[0]} {name[1]}' ";
-                                chart.Title.Text = chart_title;
-                                chart.Title.Font.Size = 14;
-                                var series = chart.Series.Add(testWorksheet.Cells["B3:B70"], testWorksheet.Cells["A3:A70"]);
+                                package.Save();
+
                             }
-                            package.Save();
-                            
                         }
+                        
 
 
                     }
                     else
                     {
-                        Console.WriteLine($"files.Count > 0 -----------------------> {folder_name}");
+                        //Console.WriteLine($"files.Count < 0 -----------------------> {folder_name}");
                     }
 
                     c++;

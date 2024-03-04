@@ -88,11 +88,11 @@ namespace ArticleManage
 
 
         /// <summary>
-        /// filePaths = for no or for yes ris files
+        /// filePaths = for no or for yes ris csv_file_name
         /// </summary>
         /// <param name="filePaths"></param>
         /// <returns></returns>
-        public List<Article> returnArticleWithDataFromRISfiles(List<String> filePaths, String dirPath)
+        public List<Article> returnArticleWithDataFromRISfiles(List<String> filePaths, String dirPath, FoldersStructure folders)
         {
             List<Article> articles = new List<Article>();
             int id = 0;
@@ -186,23 +186,99 @@ namespace ArticleManage
                         {
                             article.URL = line.Replace("UR  - ", "");
                         }
-                        
-
-
                     }
-                    
-
                 }
+
+                //[[[[[[[[[[[[            
+                string[] title = article.PrimaryTitle.Split(null);
+                String new_title = $"Data {article.Id} {title[0]} {title[1]} {title[2]} {title[3]}... .pdf";
+                article.FormalNicelyPDFName = new_title;
+                //[[[[[[[[[[[[
+
+                //System.Console.WriteLine(article.DOI);
+                String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
+                if (Directory.Exists(folder_path))
+                {
+                    DirectoryInfo dir = new DirectoryInfo(folder_path);
+                    FileInfo[] Files = dir.GetFiles();
+                    List<string> csv_file_name = new List<string>();
+                    List<string> bmp_file_name = new List<string>();
+                    foreach (var file in Files)
+                    {
+                        if (file.Name.Contains(".csv"))
+                        {
+                            csv_file_name.Add(file.FullName);
+                        }
+
+                        if (file.Name.Contains(".bmp"))
+                        {
+                            bmp_file_name.Add(file.FullName);
+                        }
+                    }
+                    article.IzothermNumber = csv_file_name.Count;
+                    article.ImageNumber = bmp_file_name.Count;
+                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  bmp_name = {article.ImageNumber} ");
+                }
+
                 articles.Add(article);
             }
             return articles;
         }
 
-        public List<Article> returnArticleWithAllData(List<String> filePaths, String dirPath)
+        public List<Article> returnArticleWithAllData(List<String> filePaths, String dirPath, FoldersStructure folders)
         {
-            var articles = returnArticleWithDataFromRISfiles(filePaths, dirPath);
+            var articles = returnArticleWithDataFromRISfiles(filePaths, dirPath, folders);
+            var foldersFilePaths = folders.output_folders.insideFolderPaths;
+            foreach (var article in articles)
+            {
+                //System.Console.WriteLine(article.DOI);
+                String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
+                if (Directory.Exists(folder_path))
+                {
+                    DirectoryInfo dir = new DirectoryInfo(folder_path);
+                    FileInfo[] Files = dir.GetFiles();
+                    List<string> files = new List<string>();
+                    foreach (var file in Files)
+                    {
+                        if (file.Name.Contains(".csv"))
+                        {
+                            files.Add(file.FullName);
+                        }
+                    }
+                    article.IzothermNumber = files.Count;
+                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber} ");
+                }
 
 
+                //foreach (var item in foldersFilePaths)
+                //{
+                //    if(Directory.Exists(item + "\\graphs")) 
+                //    {
+                //        DirectoryInfo dir = new DirectoryInfo(item + "\\graphs");
+                //        FileInfo[] Files = dir.GetFiles();
+                //        var folder_name = item.Replace(folders.output_folders.folderPath, "");
+
+                //        List<string> csv_file_name = new List<string>();
+                //        foreach (var file in Files)
+                //        {
+                //            if (file.Name.Contains(".csv"))
+                //            {
+                //                csv_file_name.Add(file.FullName);
+                //            }
+                //        }
+
+                //        Console.WriteLine($"{folder_name} -> csv file = {csv_file_name.Count}  {item.Replace(folders.output_folders.folderPath, "")}");
+                //        if(article.FileName == folder_name)
+                //        {
+                //            article.IzothermNumber = csv_file_name.Count;
+                //            Console.WriteLine($"{folder_name} -> csv file = {article.IzothermNumber}  {article.FileName}");
+                //            foldersFilePaths.Remove(item);
+                //        }
+                //    }
+
+                //}
+
+            }
 
             return articles;
         }

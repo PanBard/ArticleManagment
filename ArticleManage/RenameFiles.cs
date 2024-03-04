@@ -27,30 +27,17 @@ namespace ArticleManage
         void makeFormalNameForPDFfiles()
         {
             MethodsArchive method = new MethodsArchive();
-            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath);
+            var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
             List<String> new_names = new List<string>();
 
             foreach (var article in articles)
             {
-                foreach (var old_name in folders.input_pdf.filesNames)
+                String old_path = folders.input_pdf.folderPath + article.FileName+".pdf";
+                String new_path = folders.output_pdf.folderPath + article.FormalNicelyPDFName;
+                if (!File.Exists(new_path))
                 {
-                    if ( old_name.Contains($"{article.FileName}."))
-                        //if (old_name.Contains($"{article.FileName} "))
-                    {
-                        //Console.WriteLine($"{old_name} == > {article.FileName}");
-                        string[] title = article.PrimaryTitle.Split(null);
-                        String new_title = $"Data {article.Id} {title[0]} {title[1]} {title[2]} {title[3]}... .pdf";
-                        //String new_title = $"Data{article.Id}.pdf";
-                        Console.WriteLine($"{old_name} == > {article.FileName} [id:{article.Id}]  ==>  {new_title}");
-                        String old_path = folders.input_pdf.folderPath + old_name;
-                        String new_path = folders.output_pdf.folderPath + new_title;
-                        if (!File.Exists(new_path)) 
-                        {
-                            System.IO.File.Copy(old_path, new_path);
-                        }
-                        
-                    }
-                }
+                    System.IO.File.Copy(old_path, new_path);
+                }      
             }
 
         }

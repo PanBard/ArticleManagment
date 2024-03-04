@@ -18,10 +18,26 @@ namespace ArticleManage
 
         public int Id { get; set; }
         public String FileName { get; set; }
-        public String ContactPerson { get; set; }
-        public String Email { get; set; }
-        public String AdsorptionIsotherms { get; set; }
-        public String PoreDistribution { get; set; }
+
+        /// <summary>
+        /// TI or T1
+        /// </summary>
+        public String PrimaryTitle { get; set; }
+
+        /// <summary>
+        /// AU
+        /// </summary>
+        public List<String> Autors { get; set; }
+
+        /// <summary>
+        /// DO
+        /// </summary>
+        public String DOI { get; set; }
+
+        /// <summary>
+        /// UR
+        /// </summary>
+        public String URL { get; set; }
 
         /// <summary>
         /// VL
@@ -48,10 +64,7 @@ namespace ArticleManage
         /// </summary>
         public String PublicationYear { get; set; }
 
-        /// <summary>
-        /// DA
-        /// </summary>
-        public String DateAccessed { get; set; }
+        
 
         /// <summary>
         /// SN
@@ -63,30 +76,16 @@ namespace ArticleManage
         /// JO
         /// </summary>
         public String AbbreviationJournalName { get; set; }
-        /// <summary>
-        /// DO
-        /// </summary>
-        public String DOI { get; set; }
 
-        /// <summary>
-        /// UR
-        /// </summary>
-        public String URL { get; set; }
 
         /// <summary>
         /// TY
         /// </summary>
         public String Type { get; set; }
 
-        /// <summary>
-        /// TI or T1
-        /// </summary>
-        public String PrimaryTitle { get; set; }
+   
 
-        /// <summary>
-        /// AU
-        /// </summary>
-        public List<String> Autors { get; set; }
+
      
         /// <summary>
         /// KW or K1
@@ -105,6 +104,21 @@ namespace ArticleManage
 
         public String Citation { get; set; }
         public String EmailText { get; set; }
+
+        public String ContactPerson { get; set; }
+        public String Email { get; set; }
+        public String AdsorptionIsotherms { get; set; }
+        public String PoreDistribution { get; set; }
+
+        /// <summary>
+        /// DA
+        /// </summary>
+        public String DateAccessed { get; set; }
+
+        public int IzothermNumber { get; set; }
+        public int ImageNumber { get; set; }
+        public String FormalNicelyPDFName { get; set; }
+
         public Article()
         {
             this.Autors = new List<String>();

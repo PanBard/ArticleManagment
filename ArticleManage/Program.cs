@@ -13,7 +13,7 @@ internal class Program
 
         MakerFolderForEachPDF folderMaker = new MakerFolderForEachPDF(folders);
         Excel excel = new Excel(folders);
-
+        jsonExporter jSON = new jsonExporter(folders);
 
     }
 }

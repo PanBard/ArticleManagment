@@ -119,9 +119,12 @@ namespace ArticleManage
         public int ImageNumber { get; set; }
         public String FormalNicelyPDFName { get; set; }
 
+        public List<Isotherm> Isotherms { get; set; }
+
         public Article()
         {
             this.Autors = new List<String>();
+            this.Isotherms = new List<Isotherm>();
         }
 
     }

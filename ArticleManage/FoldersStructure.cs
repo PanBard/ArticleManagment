@@ -15,6 +15,7 @@ namespace ArticleManage
         public Folder output_ris { get; set; }
         public Folder output_folders { get; set; }
         public Folder output_excel { get; set; }
+        public Folder output_json { get; set; }
         public Folder input_graph {  get; set; }
         public Folder plot_digitizer_projects { get; set; }
         public Folder temp { get; set; }
@@ -27,6 +28,7 @@ namespace ArticleManage
             //this.output_ris = new Folder("output_ris");
             this.output_folders = new Folder("output_folders");
             this.output_excel = new Folder("output_excel");
+            this.output_json = new Folder("output_json");
             this.input_graph = new Folder("input_graph");
             //this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
             this.temp = new Folder("temp");

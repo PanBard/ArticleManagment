@@ -208,16 +208,98 @@ namespace ArticleManage
                         if (file.Name.Contains(".csv"))
                         {
                             csv_file_name.Add(file.FullName);
+
+                            //'''''''
+                            var reader = new StreamReader(File.OpenRead(file.FullName));
+                            List<string> listX = new List<string>();
+                            List<string> listY = new List<string>();
+                            List<float> floatX = new List<float>();
+                            List<float> floatY = new List<float>();
+                            while (!reader.EndOfStream)
+                            {
+                                var line = reader.ReadLine();
+                                var values = line.Split(',');
+                                
+                                listX.Add(values[0]);
+                                listY.Add(values[1]);                                
+                            }
+                            listX.RemoveRange(0, 2);
+                            listY.RemoveRange(0, 2);
+
+                            Isotherm newIsotherm = new Isotherm();
+
+                            foreach (var coloumn1 in listX) newIsotherm.XAxisData.Add(Convert.ToSingle(coloumn1));
+                            
+
+                            foreach (var coloumn1 in listY) newIsotherm.YAxisData.Add(Convert.ToSingle(coloumn1));
+
+
+                            //foreach (var coloumn1 in floatX)
+                            //{
+
+                            //    Console.WriteLine(coloumn1);
+                            //}
+
+                            //foreach (var coloumn1 in floatY)
+                            //{
+                            //    Console.WriteLine(coloumn1);
+                            //}
+
+
+                            string[] name = file.FullName.Replace(folder_path , "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+
+                            var calibrate = name[3].Split('&');
+                            if (!name[3].Contains('&'))
+                            {
+                                calibrate = name[4].Split('&');
+                            }
+
+                            //Console.WriteLine(article.FileName);
+                            //Console.WriteLine($"sample name: {name[2]}");
+                            //Console.WriteLine($"figure name: '{name[0]} {name[1]}'");
+
+                            //Console.WriteLine($"MaxX: {calibrate[1]}");
+                            //Console.WriteLine($"MinX: {calibrate[0]}");
+                            //Console.WriteLine($"MaxY: {calibrate[3]}");
+                            //Console.WriteLine($"MinY: {calibrate[2]}");
+
+                           
+                            newIsotherm.FileName = article.FileName;
+                            newIsotherm.SampleName = name[2];
+                            newIsotherm.FigureNumber = name[1];
+                            newIsotherm.MaxX = Convert.ToSingle(calibrate[1]);
+                            newIsotherm.MinX = Convert.ToSingle(calibrate[0]);
+                            newIsotherm.MaxY = Convert.ToSingle(calibrate[3]);
+                            newIsotherm.MinY = Convert.ToSingle(calibrate[2]);
+
+                            //Console.WriteLine("n" + newIsotherm.FileName);
+                            //Console.WriteLine($"n sample name: {newIsotherm.SampleName}");
+                            //Console.WriteLine($"n figure name: Figure {newIsotherm.FigureNumber}");
+
+                            //Console.WriteLine($"n MaxX: {newIsotherm.MaxX}");
+                            //Console.WriteLine($"n MinX: {newIsotherm.MinX}");
+                            //Console.WriteLine($"n MaxY: {newIsotherm.MaxY}");
+                            //Console.WriteLine($"n MinY: {newIsotherm.MinY}");
+
+                            //Console.WriteLine("n" + newIsotherm.FileName);
+                            //Console.WriteLine($" data x = {newIsotherm.XAxisData.Count}");
+                            //Console.WriteLine($" data y = {newIsotherm.YAxisData.Count}");
+
+                            article.Isotherms.Add(newIsotherm);
+
+                            //'''''''
                         }
 
                         if (file.Name.Contains(".bmp"))
                         {
                             bmp_file_name.Add(file.FullName);
+
+                            
                         }
                     }
                     article.IzothermNumber = csv_file_name.Count;
                     article.ImageNumber = bmp_file_name.Count;
-                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  bmp_name = {article.ImageNumber} ");
+                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  bmp_name = {article.ImageNumber} isotherms={article.Isotherms.Count}");
                 }
 
                 articles.Add(article);
@@ -225,63 +307,7 @@ namespace ArticleManage
             return articles;
         }
 
-        public List<Article> returnArticleWithAllData(List<String> filePaths, String dirPath, FoldersStructure folders)
-        {
-            var articles = returnArticleWithDataFromRISfiles(filePaths, dirPath, folders);
-            var foldersFilePaths = folders.output_folders.insideFolderPaths;
-            foreach (var article in articles)
-            {
-                //System.Console.WriteLine(article.DOI);
-                String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
-                if (Directory.Exists(folder_path))
-                {
-                    DirectoryInfo dir = new DirectoryInfo(folder_path);
-                    FileInfo[] Files = dir.GetFiles();
-                    List<string> files = new List<string>();
-                    foreach (var file in Files)
-                    {
-                        if (file.Name.Contains(".csv"))
-                        {
-                            files.Add(file.FullName);
-                        }
-                    }
-                    article.IzothermNumber = files.Count;
-                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber} ");
-                }
-
-
-                //foreach (var item in foldersFilePaths)
-                //{
-                //    if(Directory.Exists(item + "\\graphs")) 
-                //    {
-                //        DirectoryInfo dir = new DirectoryInfo(item + "\\graphs");
-                //        FileInfo[] Files = dir.GetFiles();
-                //        var folder_name = item.Replace(folders.output_folders.folderPath, "");
-
-                //        List<string> csv_file_name = new List<string>();
-                //        foreach (var file in Files)
-                //        {
-                //            if (file.Name.Contains(".csv"))
-                //            {
-                //                csv_file_name.Add(file.FullName);
-                //            }
-                //        }
-
-                //        Console.WriteLine($"{folder_name} -> csv file = {csv_file_name.Count}  {item.Replace(folders.output_folders.folderPath, "")}");
-                //        if(article.FileName == folder_name)
-                //        {
-                //            article.IzothermNumber = csv_file_name.Count;
-                //            Console.WriteLine($"{folder_name} -> csv file = {article.IzothermNumber}  {article.FileName}");
-                //            foldersFilePaths.Remove(item);
-                //        }
-                //    }
-
-                //}
-
-            }
-
-            return articles;
-        }
+       
 
         /// <summary>
         /// identificatior = "MK" or "MKZ"

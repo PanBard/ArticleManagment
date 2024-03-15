@@ -143,6 +143,7 @@ namespace ArticleManage
                     System.IO.Directory.CreateDirectory(path);
                     Console.WriteLine($"Create new folder [{pdf_file}]");
                 }
+
                 String graph_path = path + "\\" + "graphs";
                 bool exists2 = System.IO.Directory.Exists(graph_path);
                 if (!exists2)
@@ -158,6 +159,19 @@ namespace ArticleManage
                 {
                     System.IO.File.Copy(old_path, new_path);
                 }
+
+                //]]]]]]]]]
+                String[] only_pdf_Data_number_name = pdf_file.Split(' ');
+                String path_graph_folder = this.folders.temp_graph.folderPath + only_pdf_Data_number_name[0]+ only_pdf_Data_number_name[1];
+                bool graph_folder_exists = System.IO.Directory.Exists(path_graph_folder);
+
+                if (!graph_folder_exists)
+                {
+                    System.IO.Directory.CreateDirectory(path_graph_folder);
+                    Console.WriteLine($"Create new folder [{path_graph_folder}]");
+                }
+                //]]]]]]]]]
+
                 copyGraph(pdf_file);
                 copyTarPackage(pdf_file);
                 readDataFromProject(pdf_file);
@@ -181,14 +195,59 @@ namespace ArticleManage
                     DirectoryInfo dir = new DirectoryInfo(path);
                     FileInfo[] Files = dir.GetFiles();
                     string graph_number = "";
+                    String path_new_graph_folder = "";
                     foreach (var item in Files)
                     {
                         if(item.Name.Contains(".bmp"))
                         {
-                            string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
+                            //string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
+                            //string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
+                            //if(temp.Length > 1) 
+                            //{ 
+                            //    graph_number = temp[1];  
+                            //}
+                            //else 
+                            //{ 
+                            //    graph_number = temp2[1]; 
+                            //}
+
+                            //''''''''''
+                            string[] temp = item.Name.Replace(".bmp", "").Replace("f", "").Split(' ');
                             string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
-                            if(temp.Length > 1) { graph_number = temp[1];  }
-                            else { graph_number = temp2[1]; }
+                            if (temp.Length > 1)
+                            {
+                                graph_number = temp[1];
+                            }
+                            else
+                            {
+                                if(temp2.Count() == 3)
+                                {
+                                    graph_number = temp2[1] +"_"+ temp2[2];
+                                }
+                                else
+                                {
+                                    graph_number = temp2[1];
+                                }
+                                
+                            }
+                            //''''''''''
+
+                            //============
+                            //]]]]]]]]]
+                                //String[] only_pdf_Data_number_name = path.Replace("folders.temp.folderPath","").Split('_');
+                             
+                            path_new_graph_folder = this.folders.temp_graph.folderPath +pdf_name+"\\"+ $"{pdf_name} Figure {graph_number}";
+                            //Console.WriteLine(path_graph_folder);
+                            bool graph_folder_exists = System.IO.Directory.Exists(path_new_graph_folder);
+
+                            if (!graph_folder_exists)
+                            {
+                                System.IO.Directory.CreateDirectory(path_new_graph_folder);
+                                Console.WriteLine($"Create new folder [{path_new_graph_folder}]");
+                            }
+                            //]]]]]]]]]
+                            //============
+
                             //graph_number = temp[1];
                             //Console.WriteLine(graph_number);
                         }
@@ -204,7 +263,7 @@ namespace ArticleManage
                         var Calibration_y2 = o2["axesColl"][0]["calibrationPoints"][3]["dy"];
                         var Calibration_x1 = o2["axesColl"][0]["calibrationPoints"][0]["dx"];
                         var Calibration_x2 = o2["axesColl"][0]["calibrationPoints"][3]["dx"];
-                        Console.WriteLine($"{pdf_name} ->  x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
+                        Console.WriteLine($"{pdf_name} in Figure {graph_number} ->  x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
                         String data = "";
                         foreach (var item in o)
                         {
@@ -219,6 +278,8 @@ namespace ArticleManage
 
                             String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs" ;                            
                             String nameTxt = csv_folder_path + "\\"+"Figure "+ graph_number+" " + item["name"] +" " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
+                            String csv_in_temp_graph_folder = path_new_graph_folder + "\\" + "Figure " + graph_number + " " + item["name"] + " " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
+                            File.WriteAllText(csv_in_temp_graph_folder, data);
                             File.WriteAllText(nameTxt, data);
                             data = "";
                         }

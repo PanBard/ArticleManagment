@@ -116,15 +116,18 @@ namespace ArticleManage
         public String DateAccessed { get; set; }
 
         public int IzothermNumber { get; set; }
-        public int ImageNumber { get; set; }
+        public int GraphNumber { get; set; }
         public String FormalNicelyPDFName { get; set; }
 
-        public List<Isotherm> Isotherms { get; set; }
+        //public List<Isotherm> Isotherms { get; set; }
+
+        public List<Graph> Graphs { get; set; }
 
         public Article()
         {
             this.Autors = new List<String>();
-            this.Isotherms = new List<Isotherm>();
+            //this.Isotherms = new List<Isotherm>();
+            this.Graphs = new List<Graph>(); 
         }
 
     }

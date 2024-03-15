@@ -195,146 +195,198 @@ namespace ArticleManage
                 article.FormalNicelyPDFName = new_title;
                 //[[[[[[[[[[[[
 
-                //System.Console.WriteLine(article.DOI);
-                String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
-                if (Directory.Exists(folder_path))
-                {
-                    DirectoryInfo dir = new DirectoryInfo(folder_path);
-                    FileInfo[] Files = dir.GetFiles();
-                    List<string> csv_file_name = new List<string>();
-                    List<string> bmp_file_name = new List<string>();
-                    foreach (var file in Files)
-                    {
-                        if (file.Name.Contains(".csv"))
-                        {
-                            csv_file_name.Add(file.FullName);
+                ////System.Console.WriteLine(article.DOI);
+                //String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
+                //if (Directory.Exists(folder_path))
+                //{
+                //    DirectoryInfo dir = new DirectoryInfo(folder_path);
+                //    FileInfo[] Files = dir.GetFiles();
+                //    List<string> csv_file_name = new List<string>();
+                //    List<string> bmp_file_name = new List<string>();
+                //    foreach (var file in Files)
+                //    {
+                //        if (file.Name.Contains(".csv"))
+                //        {
+                //            csv_file_name.Add(file.FullName);
 
-                            //'''''''
-                            var reader = new StreamReader(File.OpenRead(file.FullName));
-                            List<string> listX = new List<string>();
-                            List<string> listY = new List<string>();
-                            List<float> floatX = new List<float>();
-                            List<float> floatY = new List<float>();
-                            while (!reader.EndOfStream)
-                            {
-                                var line = reader.ReadLine();
-                                var values = line.Split(',');
+                //            //'''''''
+                //            var reader = new StreamReader(File.OpenRead(file.FullName));
+                //            List<string> listX = new List<string>();
+                //            List<string> listY = new List<string>();
+                //            List<float> floatX = new List<float>();
+                //            List<float> floatY = new List<float>();
+                //            while (!reader.EndOfStream)
+                //            {
+                //                var line = reader.ReadLine();
+                //                var values = line.Split(',');
                                 
-                                listX.Add(values[0]);
-                                listY.Add(values[1]);                                
-                            }
-                            listX.RemoveRange(0, 2);
-                            listY.RemoveRange(0, 2);
+                //                listX.Add(values[0]);
+                //                listY.Add(values[1]);                                
+                //            }
+                //            listX.RemoveRange(0, 2);
+                //            listY.RemoveRange(0, 2);
 
-                            Isotherm newIsotherm = new Isotherm();
+                //            Isotherm newIsotherm = new Isotherm();
 
-                            foreach (var coloumn1 in listX) newIsotherm.XAxisData.Add(Convert.ToSingle(coloumn1));
-                            
+                //            foreach (var coloumn1 in listX) newIsotherm.XAxisData.Add(Convert.ToSingle(coloumn1));                            
+                //            foreach (var coloumn1 in listY) newIsotherm.YAxisData.Add(Convert.ToSingle(coloumn1));
 
-                            foreach (var coloumn1 in listY) newIsotherm.YAxisData.Add(Convert.ToSingle(coloumn1));
+                //            string[] name = file.FullName.Replace(folder_path , "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+
+                //            var calibrate = name[3].Split('&');
+                //            if (!name[3].Contains('&'))
+                //            {
+                //                calibrate = name[4].Split('&');
+                //            }
+
+                //            newIsotherm.FileName = article.FileName;
+                //            newIsotherm.SampleName = name[2];
+                //            newIsotherm.FigureNumber = name[1];
+                //            newIsotherm.MaxX = Convert.ToSingle(calibrate[1]);
+                //            newIsotherm.MinX = Convert.ToSingle(calibrate[0]);
+                //            newIsotherm.MaxY = Convert.ToSingle(calibrate[3]);
+                //            newIsotherm.MinY = Convert.ToSingle(calibrate[2]);
+
+                //            article.Isotherms.Add(newIsotherm);
+
+                //            //'''''''
+                //        }
+
+                //        if (file.Name.Contains(".bmp"))
+                //        {
+                //            bmp_file_name.Add(file.FullName);   
+                //        }
+                //    }
+                //    article.IzothermNumber = csv_file_name.Count;
+                //    article.GraphNumber = bmp_file_name.Count;
+                //    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  bmp_name = {article.GraphNumber} isotherms={article.Isotherms.Count}");
+                //}
 
 
-                            //foreach (var coloumn1 in floatX)
-                            //{
-
-                            //    Console.WriteLine(coloumn1);
-                            //}
-
-                            //foreach (var coloumn1 in floatY)
-                            //{
-                            //    Console.WriteLine(coloumn1);
-                            //}
 
 
-                            string[] name = file.FullName.Replace(folder_path , "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+                String temp_graph_folder_path = folders.temp_graph.folderPath + article.FileName;
+                if (Directory.Exists(temp_graph_folder_path))
+                {
+                    DirectoryInfo dir = new DirectoryInfo(temp_graph_folder_path);
+                    DirectoryInfo[] inside_main_graph_dir = dir.GetDirectories();
 
-                            var calibrate = name[3].Split('&');
-                            if (!name[3].Contains('&'))
-                            {
-                                calibrate = name[4].Split('&');
-                            }
+                    
+                    foreach (var graph_directory in inside_main_graph_dir)
+                    {                        
+                        FileInfo[] Files = graph_directory.GetFiles();
 
-                            //Console.WriteLine(article.FileName);
-                            //Console.WriteLine($"sample name: {name[2]}");
-                            //Console.WriteLine($"figure name: '{name[0]} {name[1]}'");
+                        List<string> csv_file_name = new List<string>();
+                        List<string> bmp_file_name = new List<string>();
+                        Graph new_graph = new Graph();
 
-                            //Console.WriteLine($"MaxX: {calibrate[1]}");
-                            //Console.WriteLine($"MinX: {calibrate[0]}");
-                            //Console.WriteLine($"MaxY: {calibrate[3]}");
-                            //Console.WriteLine($"MinY: {calibrate[2]}");
-
-                           
-                            newIsotherm.FileName = article.FileName;
-                            newIsotherm.SampleName = name[2];
-                            newIsotherm.FigureNumber = name[1];
-                            newIsotherm.MaxX = Convert.ToSingle(calibrate[1]);
-                            newIsotherm.MinX = Convert.ToSingle(calibrate[0]);
-                            newIsotherm.MaxY = Convert.ToSingle(calibrate[3]);
-                            newIsotherm.MinY = Convert.ToSingle(calibrate[2]);
-
-                            //Console.WriteLine("n" + newIsotherm.FileName);
-                            //Console.WriteLine($"n sample name: {newIsotherm.SampleName}");
-                            //Console.WriteLine($"n figure name: Figure {newIsotherm.FigureNumber}");
-
-                            //Console.WriteLine($"n MaxX: {newIsotherm.MaxX}");
-                            //Console.WriteLine($"n MinX: {newIsotherm.MinX}");
-                            //Console.WriteLine($"n MaxY: {newIsotherm.MaxY}");
-                            //Console.WriteLine($"n MinY: {newIsotherm.MinY}");
-
-                            //Console.WriteLine("n" + newIsotherm.FileName);
-                            //Console.WriteLine($" data x = {newIsotherm.XAxisData.Count}");
-                            //Console.WriteLine($" data y = {newIsotherm.YAxisData.Count}");
-
-                            article.Isotherms.Add(newIsotherm);
-
-                            //'''''''
-                        }
-
-                        if (file.Name.Contains(".bmp"))
+                        foreach (var file in Files)
                         {
-                            bmp_file_name.Add(file.FullName);
+                            if (file.Name.Contains(".csv"))
+                            {
+                                csv_file_name.Add(file.FullName);
 
-                            
+                                //'''''''
+                                var reader = new StreamReader(File.OpenRead(file.FullName));
+                                List<string> listX = new List<string>();
+                                List<string> listY = new List<string>();
+                                List<float> floatX = new List<float>();
+                                List<float> floatY = new List<float>();
+                                while (!reader.EndOfStream)
+                                {
+                                    var line = reader.ReadLine();
+                                    var values = line.Split(',');
+
+                                    listX.Add(values[0]);
+                                    listY.Add(values[1]);
+                                }
+                                listX.RemoveRange(0, 2);
+                                listY.RemoveRange(0, 2);
+
+                                Isotherm newIsotherm = new Isotherm();
+
+                                foreach (var coloumn1 in listX) newIsotherm.XAxisData.Add(Convert.ToSingle(coloumn1));
+                                foreach (var coloumn1 in listY) newIsotherm.YAxisData.Add(Convert.ToSingle(coloumn1));
+
+                                string[] name = file.FullName.Replace(graph_directory.FullName, "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+
+                                var calibrate = name[3].Split('&');
+                                if (!name[3].Contains('&'))
+                                {
+                                    calibrate = name[4].Split('&');
+                                }
+
+                                newIsotherm.FileName = article.FileName;
+                                newIsotherm.SampleName = name[2];
+                                newIsotherm.FigureNumber = name[1];
+                                newIsotherm.MaxX = Convert.ToSingle(calibrate[1]);
+                                newIsotherm.MinX = Convert.ToSingle(calibrate[0]);
+                                newIsotherm.MaxY = Convert.ToSingle(calibrate[3]);
+                                newIsotherm.MinY = Convert.ToSingle(calibrate[2]);
+
+                                new_graph.Isotherms.Add(newIsotherm);
+                                //article.Isotherms.Add(newIsotherm);
+                                article.IzothermNumber += 1;
+
+                            }
+
+                            if (file.Name.Contains(".bmp"))
+                            {
+                                bmp_file_name.Add(file.FullName);
+                            }
                         }
-                    }
-                    article.IzothermNumber = csv_file_name.Count;
-                    article.ImageNumber = bmp_file_name.Count;
-                    Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  bmp_name = {article.ImageNumber} isotherms={article.Isotherms.Count}");
-                }
+                        article.Graphs.Add(new_graph);
 
-                articles.Add(article);
+                        //article.IzothermNumber = csv_file_name.Count;
+                        article.GraphNumber = article.Graphs.Count;
+                        Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  graphs={article.Graphs.Count} ");
+                    }
+
+                 }
+
+
+
+
+
+
+
+
+
+                    articles.Add(article);
             }
             return articles;
         }
 
        
 
-        /// <summary>
-        /// identificatior = "MK" or "MKZ"
-        /// </summary>
-        /// <param name="text"></param>
-        /// <param name="indetificator"></param>
-        /// <returns></returns>
-        public List<Article> insertContactAndFiguresToArticles(string[] text, List<Article> articles)
-        {
-            foreach(Article article in articles) 
-            {
-                for (int i = 0; i < text.Length; i++)
-                {
-                    if (text[i].Contains(article.FileName))
-                    {                        
-                       
-                        article.ContactPerson = text[i + 1].Trim();
-                        article.Email = text[i + 2].Trim();
-                        article.AdsorptionIsotherms = text[i + 3].Trim().Replace("Adsorption:","");
-                        article.PoreDistribution = text[i + 4].Trim().Replace("Pore:", "");
-                        
-                    }
-                }
-            }                       
-            return articles;
-        }
 
+        ///// <summary>
+        ///// identificatior = "MK" or "MKZ"
+        ///// </summary>
+        ///// <param name="text"></param>
+        ///// <param name="indetificator"></param>
+        ///// <returns></returns>
+        //public List<Article> insertContactAndFiguresToArticles(string[] text, List<Article> articles)
+        //{
+        //    foreach(Article article in articles) 
+        //    {
+        //        for (int i = 0; i < text.Length; i++)
+        //        {
+        //            if (text[i].Contains(article.FileName))
+        //            {                        
+                       
+        //                article.ContactPerson = text[i + 1].Trim();
+        //                article.Email = text[i + 2].Trim();
+        //                article.AdsorptionIsotherms = text[i + 3].Trim().Replace("Adsorption:","");
+        //                article.PoreDistribution = text[i + 4].Trim().Replace("Pore:", "");
+                        
+        //            }
+        //        }
+        //    }                       
+        //    return articles;
+        //}
+
+        
 
     }
 

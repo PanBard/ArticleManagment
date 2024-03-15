@@ -19,6 +19,7 @@ namespace ArticleManage
         public Folder input_graph {  get; set; }
         public Folder plot_digitizer_projects { get; set; }
         public Folder temp { get; set; }
+        public Folder temp_graph { get; set; }
 
         public FoldersStructure()
         {
@@ -32,6 +33,7 @@ namespace ArticleManage
             this.input_graph = new Folder("input_graph");
             //this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
             this.temp = new Folder("temp");
+            this.temp_graph = new Folder("temp_graph");
         }
 
 

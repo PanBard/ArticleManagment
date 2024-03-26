@@ -1,0 +1,12 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1_1,KKSN,755,0.445,0.348,,,,,,,,
+1_1,KN,247,0.136,0.120,,,,,,,,
+1_1,KSN,608,0.341,0.331,,,,,,,,
+1_1,YKN,163,0.087,0.079,,,,,,,,
+1_1,YKSN,237,0.131,0.115,,,,,,,,
+1_2,KOH2,266,0.135,0.124,,,,,,,,
+1_2,KOH3,312,0.155,0.151,,,,,,,,
+1_2,KOHKN3,835,0.458,0.412,,,,,,,,
+1_2,KOHKS3,569,0.281,0.258,,,,,,,,
+1_2,KOHS2,437,0.295,0.189,,,,,,,,
+1_2,KOHS3,456,0.235,0.206,,,,,,,,

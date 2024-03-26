@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,AC-313.15-10-900-10,768,0.21,0.13,,,,,,,,
+1,AC-313.15-20-540-8,578,0.17,0.12,,,,,,,,
+1,AC-313.15-20-720-8,645,0.19,0.13,,,,,,,,
+1,Ubtreated,352,0.12,0.08,,,,,,,,

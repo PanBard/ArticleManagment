@@ -1,0 +1,10 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2_1,UFA-2-600,1055,0.58,0.45,,,,,,,,
+2_1,UFFA-2-800,2273,1.24,0.70,,,,,,,,
+2_1,UFFA-2-700,1925,1.04,0.79,,,,,,,,
+2_1,UFFA-2-600,1093,0.58,0.49,,,,,,,,
+2_1,UFFA-2-500,28,0.03,0.01,,,,,,,,
+2_2,UFFA-1-600-b-black,416,0.23,0.2,,,,,,,,
+2_2,UFFA-2-600-b-red,,,,,,,,,,,
+2_2,UFFA-3-600-b-blue,1175,0.61,0.54,,,,,,,,
+2_2,UFFA-4-600-b-green,1639,0.90,0.48,,,,,,,,

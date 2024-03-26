@@ -1,0 +1,13 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2_1,S1AC_700_stC,280,,,,2.13,700,1,,,,
+2_1,S1AC_800_stC,550,,,,2.25,800,1,,,,
+2_1,S1AC_900_stC,400,,,,2.69,900,1,,,,
+2_2,S2AC-700,490,,,,2.29,700,1,,,,
+2_2,S2AC-800,650,,,,2.34,800,1,,,,
+2_2,S2AC-900,480,,,,2.57,900,1,,,,
+5_1,S1AC-1h,550,,,,2.25,800,1,,,,
+5_1,S1AC-3h,680,,,,2.38,800,3,,,,
+5_1,S1AC-6h,530,,,,2.62,800,6,,,,
+5_2,S2AC-1h,650,,,,2.34,800,1,,,,
+5_2,S2AC-3h,790,,,,2.41,800,3,,,,
+5_2,S2AC-6h,780,,,,2.54,800,6,,,,

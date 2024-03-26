@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2,ETP-200-ACF,922,0.40,,,,,,,,,
+2,ETP-250-ACF,1047,0.46,,,,,,,,,
+2,ETP-300-ACF,862,0.38,,,,,,,,,
+2,ETP-ACF,755,0.33,,,,,,,,,

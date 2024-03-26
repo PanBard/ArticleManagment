@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+3,NPC-600,177,0.13,0.07,,,,,,,,
+3,NPC-700,315,0.18,0.12,,,,,,,,
+3,NPC-800,619,0.28,0.24,,,,,,,,
+3,NPC-900,1256,0.65,0.46,,,,,,,,

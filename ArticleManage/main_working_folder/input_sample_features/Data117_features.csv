@@ -1,0 +1,7 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2_1,CTPC,415,0.18,0.16,,,,,,,,
+2_1,CTZn,613,0.29,0.28,,,,,,,,
+2_1,CTZnPC,816,0.37,0.36,,,,,,,,
+2_2,CTPC-A,1256,0.60,0.54,,,,,,,,
+2_2,CTZn-A,723,0.38,0.30,,,,,,,,
+2_2,CTZnPC-A,960,0.42,0.40,,,,,,,,

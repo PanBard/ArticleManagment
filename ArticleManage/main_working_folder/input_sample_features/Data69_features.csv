@@ -1,0 +1,7 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,D3055011,398,0.14,,,,,,,,NaOH,hydrolityc_lignin
+1,D3065011,654,0.22,,,,,,,,NaOH,hydrolityc_lignin
+1,D3065013,2227,0.95,,,,,,,,NaOH,hydrolityc_lignin
+1,D9065011,670,0.26,,,,,,,,NaOH,hydrolityc_lignin
+1,D9065013,1609,0.63,,,,,,,,NaOH,hydrolityc_lignin
+1,D9075013,982,0.47,,,,,,,,NaOH,hydrolityc_lignin

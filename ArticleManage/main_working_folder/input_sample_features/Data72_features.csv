@@ -1,0 +1,7 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+3,BAC-1000,636.91,0.363,,,,,,,,CO2,
+3,BAC-1100,503.40,0.238,,,,,,,,CO2,
+3,BAC-600,75.50,0.059,,,,,,,,CO2,
+3,BAC-700,93.59,0.076,,,,,,,,CO2,
+3,BAC-800,126.60,0.089,,,,,,,,CO2,
+3,BAC-900,247.44,0.130,,,,,,,,CO2,

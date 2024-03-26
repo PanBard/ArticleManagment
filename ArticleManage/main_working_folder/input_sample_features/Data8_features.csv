@@ -1,0 +1,6 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2,CA1,359.15,,,,,,,,,,
+2,PFA2,447.45,,,,,,,,,,
+2,PFA2-2,402.19,,,,,,,,,,
+2,PFA5,512.2,,,,,,,,,,
+2,Takeda5A,,,,,,,,,,,

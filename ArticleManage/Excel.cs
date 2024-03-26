@@ -36,6 +36,8 @@ namespace ArticleManage
             var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
             //var articles2 = method.returnArticleWithAllData(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
 
+            //make_samples_features_files(articles); //    <------ to make csv files for sample features !!!
+
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             String excelFilePath = folders.output_excel.folderPath + excelFileName;
             var file = new FileInfo(excelFilePath);
@@ -105,7 +107,7 @@ namespace ArticleManage
                         String excelFilePath = item +"\\"+ pdf_name + "_all_graphs_excel.xlsx";
                         //Console.WriteLine(excelFilePath);
                         var file = new FileInfo(excelFilePath);
-                        DeleteIfExists(file); //delete file if exist
+                        //DeleteIfExists(file); //delete file if exist
                         var excelTextFormat = new ExcelTextFormat();
                         excelTextFormat.Delimiter = ',';
                         excelTextFormat.EOL = "\n";
@@ -125,7 +127,7 @@ namespace ArticleManage
 
                                     //calibrate.ToList().ForEach(x => Console.Write(x+", "));
                                     String txt = File.ReadAllText(csv_file_path);
-                                    //Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
+                                    Console.WriteLine($"Worksheet: {csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")}");
                                     package.Workbook.Worksheets.Add(csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")).Cells["A1"].LoadFromText(txt, excelTextFormat); //start from A2 cell ;true for take name of property and put it as header column
                                     var testWorksheet = package.Workbook.Worksheets[csv_file_path.Replace(item + "\\graphs", "").Replace(".csv", "").Replace("\\", "")];
                                     ExcelChart chart = testWorksheet.Drawings.AddChart("chart", eChartType.XYScatter);
@@ -168,28 +170,37 @@ namespace ArticleManage
                 
             }
 
-            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            //String excelFilePath = folders.output_excel.folderPath + excelFileName;
-            //var file = new FileInfo(excelFilePath);
-            //DeleteIfExists(file); //delete file if exist
 
-            //using (var package = new ExcelPackage(file))
-            //{
-            //    var workSheet = package.Workbook.Worksheets.Add("artykuly");
-            //    var rangeCells = workSheet.Cells["A2"].LoadFromText(, true); //start from A2 cell ;true for take name of property and put it as header column
-            //    rangeCells.AutoFitColumns(); //expand column if content is big
-
-            //    var workSheet2 = package.Workbook.Worksheets.Add("artykuly_sczytane");
-            //    var rangeCells2 = workSheet2.Cells["A2"].LoadFromCollection(readed_articles, true); //start from A2 cell ;true for take name of property and put it as header column
-
-
-            //    package.SaveAsync();
-            //    Console.WriteLine($"Saved file: {excelFileName}");
-            //}
         }
 
 
-
+        private void make_samples_features_files(List<Article> articles)
+        {
+            
+            foreach (var article in articles)
+            {
+                String fileName = $"{article.FileName}_features.csv";
+                String filePath = folders.input_sample_features.folderPath + fileName;                
+                String data = "Figure,Sample,Total_surface[m2/g],V_total[cm3/g],V_micro[cm3/g],V_meso[cm3/g],Pore_diameter[nm],Activ_temp[stC],Activ_time[min],Activ_agent,Material" + "\n";
+                var graphs = article.Graphs;
+                foreach (var graph in graphs)
+                {                   
+                    foreach (var izo in graph.Isotherms)
+                    {                            
+                        data += izo.FigureNumber+","+izo.SampleName + ",,,,,,,,," + "\n";                            
+                    }                    
+                }
+                
+                if (!File.Exists(filePath))
+                {
+                    //Console.WriteLine($"File {fileName} was created in {filePath}");
+                    Console.WriteLine(data);
+                    File.WriteAllText(filePath, data);
+                }
+                
+            }
+            
+        }
 
 
 

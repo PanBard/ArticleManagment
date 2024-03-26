@@ -1,0 +1,7 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2,PET-8120-CO2,77.8,,,,,,,,,,
+2,PET-815-Air,25.2,,,,,,,,,,
+2,PET-8240-Air,621.2,,,,,,,,,,
+2,PET-KOH-450,16.6,,,,,,,,,,
+2,PET-KOH-600,50.2,,,,,,,,,,
+2,PET-KOH-800,732.7,,,,,,,,,,

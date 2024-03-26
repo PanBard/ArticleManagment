@@ -1,0 +1,13 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+3,bengkirai_wood_400,26,0.0062,0.0022,,,,,,,,
+3,bengkirai_wood_600,80,0.0153,0.0042,,,,,,,,
+3,bengkirai_wood_800,74,0.0130,0.0037,,,,,,,,
+4,coconut_shells_400stC,263,0.0403,0.0260,,,,,,,,
+4,coconut_shells_600stC,250,0.0649,0.0253,,,,,,,,
+4,coconut_shells_800stC,271,0.0757,0.0409,,,,,,,,
+7,coconut_shells_2h,100,0.0240,0.0086,,,,,,,,
+7,coconut_shells_4h,251,0.0653,0.0255,,,,,,,,
+7,coconut_shells_6h,249,0.0647,0.0253,,,,,,,,
+8,bengkirai_wood_2h,26,0.0070,0.0029,,,,,,,,
+8,bengkirai_wood_4h,81,0.0178,0.0061,,,,,,,,
+8,bengkirai_wood_6h,74,0.0153,0.0054,,,,,,,,

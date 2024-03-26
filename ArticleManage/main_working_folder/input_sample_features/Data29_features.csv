@@ -1,0 +1,6 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,almond_shells,,,,,,,,,,,
+1,apricot_stones,,,,,,,,,,,
+2,carbon_A,,,,,,,,,,,
+2,carbon_B,,,,,,,,,,,
+2,carbon_C,,,,,,,,,,,

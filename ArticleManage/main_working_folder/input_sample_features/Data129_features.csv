@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,AC-2,620,,0.29,,,,,,,,
+1,AC-Na2CO3,730,,0.31,,,,,,,,
+1,AC-NH4OH,530,,0.25,,,,,,,,
+1,AC3-NaOH,620,,0.29,,,,,,,,

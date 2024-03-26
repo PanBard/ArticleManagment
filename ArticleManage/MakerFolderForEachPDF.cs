@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aspose.Zip.Rar;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace ArticleManage
 {
@@ -34,10 +35,10 @@ namespace ArticleManage
                 
             }
             
-            foreach (var folder in folders.output_folders.insideFolderPaths)
-            {
-                Console.WriteLine(folder);
-            }
+            //foreach (var folder in folders.output_folders.insideFolderPaths)
+            //{
+            //    Console.WriteLine(folder);
+            //}
 
             List<String> orderedList = files_names
             .OrderBy(x => new string(x.Where(char.IsLetter).ToArray()))
@@ -177,7 +178,7 @@ namespace ArticleManage
                 readDataFromProject(pdf_file);
                 
             }
-            Console.WriteLine($"Making folders for each {folders.input_pdf.filesNames.Count} articles");
+            //Console.WriteLine($"Making folders for each {folders.input_pdf.filesNames.Count} articles");
         }
 
         private void readDataFromProject(String pdfFileName)
@@ -185,111 +186,133 @@ namespace ArticleManage
             var t = pdfFileName.Split(' ');
             var pdf_name = t[0].ToString() + t[1].ToString();
 
-            foreach (var path in folders.temp.insideFolderPaths)
+            //''''''''
+            //bool CSVFilesExists = false;
+            String excelFilePath = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "")  + "\\" + pdf_name + "_all_graphs_excel.xlsx";
+            //String csv_folder_path_check = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs";
+            //DirectoryInfo csv_dir = new DirectoryInfo(csv_folder_path_check);
+            //FileInfo[] csv_files = csv_dir.GetFiles();
+            //foreach (var file in csv_files)
+            //{
+            //    if(file.Name.Contains(".csv"))
+            //    {
+            //        CSVFilesExists = true;
+            //    }
+            //}
+            //''''''''
+            if (!File.Exists(excelFilePath))
             {
-                String elo = path + " ";
-                if(elo.Contains(pdf_name + " ") || path.Contains(pdf_name + "_"))
+                foreach (var path in folders.temp.insideFolderPaths)
                 {
-
-                    //[[[[[[[[[[[[[[[[
-                    DirectoryInfo dir = new DirectoryInfo(path);
-                    FileInfo[] Files = dir.GetFiles();
-                    string graph_number = "";
-                    String path_new_graph_folder = "";
-                    foreach (var item in Files)
+                    String elo = path + " ";
+                    if (elo.Contains(pdf_name + " ") || path.Contains(pdf_name + "_"))
                     {
-                        if(item.Name.Contains(".bmp"))
-                        {
-                            //string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
-                            //string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
-                            //if(temp.Length > 1) 
-                            //{ 
-                            //    graph_number = temp[1];  
-                            //}
-                            //else 
-                            //{ 
-                            //    graph_number = temp2[1]; 
-                            //}
 
-                            //''''''''''
-                            string[] temp = item.Name.Replace(".bmp", "").Replace("f", "").Split(' ');
-                            string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
-                            if (temp.Length > 1)
+                        //[[[[[[[[[[[[[[[[
+                        DirectoryInfo dir = new DirectoryInfo(path);
+                        FileInfo[] Files = dir.GetFiles();
+                        string graph_number = "";
+                        String path_new_graph_folder = "";
+                        foreach (var item in Files)
+                        {
+                            if (item.Name.Contains(".bmp"))
                             {
-                                graph_number = temp[1];
-                            }
-                            else
-                            {
-                                if(temp2.Count() == 3)
+                                //string[] temp = item.Name.Replace(".bmp","").Replace("f","").Split(' ');
+                                //string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
+                                //if(temp.Length > 1) 
+                                //{ 
+                                //    graph_number = temp[1];  
+                                //}
+                                //else 
+                                //{ 
+                                //    graph_number = temp2[1]; 
+                                //}
+
+                                //''''''''''
+                                string[] temp = item.Name.Replace(".bmp", "").Replace("f", "").Split(' ');
+                                string[] temp2 = item.Name.Replace(".bmp", "").Replace("f", "").Split('_');
+                                if (temp.Length > 1)
                                 {
-                                    graph_number = temp2[1] +"_"+ temp2[2];
+                                    graph_number = temp[1];
                                 }
                                 else
                                 {
-                                    graph_number = temp2[1];
+                                    if (temp2.Count() == 3)
+                                    {
+                                        graph_number = temp2[1] + "_" + temp2[2];
+                                    }
+                                    else
+                                    {
+                                        graph_number = temp2[1];
+                                    }
+
                                 }
-                                
-                            }
-                            //''''''''''
+                                //''''''''''
 
-                            //============
-                            //]]]]]]]]]
+                                //============
+                                //]]]]]]]]]
                                 //String[] only_pdf_Data_number_name = path.Replace("folders.temp.folderPath","").Split('_');
-                             
-                            path_new_graph_folder = this.folders.temp_graph.folderPath +pdf_name+"\\"+ $"{pdf_name} Figure {graph_number}";
-                            //Console.WriteLine(path_graph_folder);
-                            bool graph_folder_exists = System.IO.Directory.Exists(path_new_graph_folder);
 
-                            if (!graph_folder_exists)
-                            {
-                                System.IO.Directory.CreateDirectory(path_new_graph_folder);
-                                Console.WriteLine($"Create new folder [{path_new_graph_folder}]");
+                                path_new_graph_folder = this.folders.temp_graph.folderPath + pdf_name + "\\" + $"{pdf_name} Figure {graph_number}";
+                                //Console.WriteLine(path_graph_folder);
+                                bool graph_folder_exists = System.IO.Directory.Exists(path_new_graph_folder);
+
+                                if (!graph_folder_exists)
+                                {
+                                    System.IO.Directory.CreateDirectory(path_new_graph_folder);
+                                    Console.WriteLine($"Create new folder [{path_new_graph_folder}]");
+                                }
+                                //]]]]]]]]]
+                                //============
+
+                                //graph_number = temp[1];
+                                //Console.WriteLine(graph_number);
                             }
-                            //]]]]]]]]]
-                            //============
-
-                            //graph_number = temp[1];
-                            //Console.WriteLine(graph_number);
                         }
-                    }
-                    //[[[[[[[[[[[[[[[[
-                    using (StreamReader file = File.OpenText(path + "\\wpd.json"))
+                        //[[[[[[[[[[[[[[[[
+                        using (StreamReader file = File.OpenText(path + "\\wpd.json"))
 
-                    using (JsonTextReader reader = new JsonTextReader(file))
-                    {
-                        JObject o2 = (JObject)JToken.ReadFrom(reader);
-                        var o = o2["datasetColl"];
-                        var Calibration_y1 = o2["axesColl"][0]["calibrationPoints"][0]["dy"];
-                        var Calibration_y2 = o2["axesColl"][0]["calibrationPoints"][3]["dy"];
-                        var Calibration_x1 = o2["axesColl"][0]["calibrationPoints"][0]["dx"];
-                        var Calibration_x2 = o2["axesColl"][0]["calibrationPoints"][3]["dx"];
-                        Console.WriteLine($"{pdf_name} in Figure {graph_number} ->  x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
-                        String data = "";
-                        foreach (var item in o)
+                        using (JsonTextReader reader = new JsonTextReader(file))
                         {
-                            //Console.WriteLine(item["name"]);
-                            data += item["name"]+"," + "\n" +"X,Y" + "\n";
-                            
-                            foreach (var item1 in item["data"])
+                            JObject o2 = (JObject)JToken.ReadFrom(reader);
+                            var o = o2["datasetColl"];
+                            var Calibration_y1 = o2["axesColl"][0]["calibrationPoints"][0]["dy"];
+                            var Calibration_y2 = o2["axesColl"][0]["calibrationPoints"][3]["dy"];
+                            var Calibration_x1 = o2["axesColl"][0]["calibrationPoints"][0]["dx"];
+                            var Calibration_x2 = o2["axesColl"][0]["calibrationPoints"][3]["dx"];
+                            //Console.WriteLine($"{pdf_name} in Figure {graph_number} ->  x1:{Calibration_x1}, x2: {Calibration_x2}, y1: {Calibration_y1}, y2: {Calibration_y2}");
+                            String data = "";
+                            foreach (var item in o)
                             {
-                                //Console.WriteLine($"x: {item1["value"][0]} y: {item1["value"][1]}");
-                                data += $"{String.Format("{0:0.0000}",item1["value"][0])} , {String.Format("{0:0.0000}", item1["value"][1])}" + "\n";
-                            }
+                                //Console.WriteLine(item["name"]);
+                                data += item["name"] + "," + "\n" + "X,Y" + "\n";
 
-                            String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs" ;                            
-                            String nameTxt = csv_folder_path + "\\"+"Figure "+ graph_number+" " + item["name"] +" " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
-                            String csv_in_temp_graph_folder = path_new_graph_folder + "\\" + "Figure " + graph_number + " " + item["name"] + " " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
-                            File.WriteAllText(csv_in_temp_graph_folder, data);
-                            File.WriteAllText(nameTxt, data);
-                            data = "";
+                                foreach (var item1 in item["data"])
+                                {
+                                    //Console.WriteLine($"x: {item1["value"][0]} y: {item1["value"][1]}");
+                                    data += $"{String.Format("{0:0.0000}", item1["value"][0])} , {String.Format("{0:0.0000}", item1["value"][1])}" + "\n";
+                                }
+
+                                String csv_folder_path = folders.output_folders.folderPath + pdfFileName.Replace("... .pdf", "") + "\\graphs";
+                                String nameTxt = csv_folder_path + "\\" + "Figure " + graph_number + " " + item["name"] + " " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
+                                String csv_in_temp_graph_folder = path_new_graph_folder + "\\" + "Figure " + graph_number + " " + item["name"] + " " + $"[{Calibration_x1}&{Calibration_x2}&{Calibration_y1}&{Calibration_y2}]" + ".csv";
+                                File.WriteAllText(csv_in_temp_graph_folder, data);
+                                File.WriteAllText(nameTxt, data);
+                                data = "";
+                            }
+                            //Console.WriteLine(o[0]);
                         }
-                        //Console.WriteLine(o[0]);
+
                     }
+
 
                 }
-               
-
             }
+            
+
+
+
+
            
                            
         }

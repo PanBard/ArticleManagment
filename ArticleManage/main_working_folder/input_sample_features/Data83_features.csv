@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+5,PEACF-30,1090,0.56,0.42,,,,,,,,
+5,PEACF-40,1250,0.64,0.49,,,,,,,,
+5,PEACF-50,1560,0.82,0.60,,,,,,,,
+5,PEACF-60,1980,1.11,0.80,,,,,,,,

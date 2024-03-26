@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2,5AC,521.5,0.215,0.217,,,,,,,,
+2,6AC,631,0.314,0.288,,,,,,,,
+2,7AC,905,0.569,0.449,,,,,,,,
+2,CAC,860,0.55,0.48,,,,,,,,

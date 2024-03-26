@@ -1,0 +1,10 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2_1,OPKC10,1228,0.78,0.16,,,,,,,,
+2_1,OPKC7,477,0.23,0.21,,,,,,,,
+2_1,OPKC8,621,0.30,0.22,,,,,,,,
+2_1,OPKC85,987,0.48,0.37,,,,,,,,
+2_1,OPKC9,1177,0.59,0.40,,,,,,,,
+2_1,OPKC95,1352,0.79,0.22,,,,,,,,
+2_2,OPZn5,1215,0.68,0.13,,,,,,,,
+2_2,OPZn8,836,0.52,0.12,,,,,,,,
+2_2,OPZn9,,,,,,,,,,,

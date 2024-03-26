@@ -1,0 +1,4 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+8,NDC-500,39,0.046,0.024,,,,,,,,
+8,NDC-600,118,0.097,0.045,,,,,,,,
+8,NDC-700,426,0.28,0.177,,,,,,,,

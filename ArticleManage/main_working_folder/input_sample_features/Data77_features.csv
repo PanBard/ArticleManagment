@@ -1,0 +1,11 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+3_1,PAC200-2,631,0.27,,,,,,,,CO2,
+3_1,PAC200-4,540,0.23,,,,,,,,CO2,
+3_1,PAC270-2,161,0.08,,,,,,,,CO2,
+3_1,PAC270-4,77,0.05,,,,,,,,CO2,
+3_1,PAC550-2,600,0.28,,,,,,,,CO2,
+3_2,CAC-NOCarb,675,0.31,,,,,,,,KOH,
+3_2,CAC200-2,502,0.27,,,,,,,,KOH,
+3_2,CAC200-4,600,0.32,,,,,,,,KOH,
+3_2,CAC270-2,230,0.22,,,,,,,,KOH,
+3_2,CAC270-4,81,0.08,,,,,,,,KOH,

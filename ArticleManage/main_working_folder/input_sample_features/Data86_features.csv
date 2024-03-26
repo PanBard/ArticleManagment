@@ -1,0 +1,5 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2,ACK2,934,0.8,0.78,,,,,,,,
+2,ACK3,1058,1.23,0.85,,,,,,,,
+2,ACZ2,745,0.80,0.61,,,,,,,,
+2,ACZ3,823,0.92,0.68,,,,,,,,

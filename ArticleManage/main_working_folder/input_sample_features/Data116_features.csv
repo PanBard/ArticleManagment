@@ -1,0 +1,6 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,PAC-0.2K2CO3-750-0.5,229,0.16,0.11,,,,,,,,
+1,PAC-0.2KOH-750-0.5,182,0.12,0.08,,,,,,,,
+1,PAC-0.5KOH-750-0.5,626,0.36,0.30,,,,,,,,
+1,PAC-1.5K2CO3-750-0.5,669,0.43,0.35,,,,,,,,
+1,PAC-750-0.5h,83,0.007,0.03,,,,,,,,

@@ -1,0 +1,10 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,K2CO3,1044,0.6769,0.4581,,,,,,,,
+1,KOH,3441,2.093,1.304,,,,,,,,
+1,Na2CO3,484.5,0.3561,0.1670,,,,,,,,
+1,NaOH,1263,0.9019,0.5177,,,,,,,,
+4,3,1823,1.158,0.8194,,,,,,,,
+4,3.5,2691,1.752,1.127,,,,,,,,
+4,4,3441,2.093,1.304,,,,,,,,
+4,4.5,3055,1.873,1.403,,,,,,,,
+4,5,2782,1.700,1.100,,,,,,,,

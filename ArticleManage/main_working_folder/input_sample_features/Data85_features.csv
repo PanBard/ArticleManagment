@@ -1,0 +1,6 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,BB-32,1100,0.48,0.44,,,,,,,,
+1,BS-62,2130,0.99,0.79,,,,,,,,
+1,BW-42,875,0.40,0.34,,,,,,,,
+1,BW-63,1147,0.52,0.45,,,,,,,,
+1,BW-C,382,0.19,0.15,,,,,,,,

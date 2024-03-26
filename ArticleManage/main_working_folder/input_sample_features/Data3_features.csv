@@ -1,0 +1,7 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+1,A-2,1872,-,-,-,-,730,,,,NaOH,anthracite1
+1,A-3,2746,-,-,-,-,730,,,,KOH,anthracite1
+1,Ab-2,1741,-,-,-,-,750,,,,NaOH,anthracite2
+1,CS-1,2196,-,-,-,-,750,,,,NaOH,cococut_shell
+1,L-1,56,-,-,-,-,730,,,,NaOH,lignite
+1,S-2,2331,-,-,-,-,760,,,,NaOH,subbituminous

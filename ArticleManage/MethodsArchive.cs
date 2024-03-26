@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Vml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,88 @@ namespace ArticleManage
         public MethodsArchive() 
         {
          
+        }
+
+        public void changeCSVFile(FoldersStructure folders) //method for change csv file for samples features
+        {
+            var saving_folder_path = folders.output_folders.folderPath.Replace("output_folders\\", "") + "output_new_csv_files_v2";
+            bool exists = System.IO.Directory.Exists(saving_folder_path);
+            if (!exists)
+            {
+                System.IO.Directory.CreateDirectory(saving_folder_path);
+                Console.Write($"Create new folder");
+            }
+
+            var csv_files_names = folders.input_sample_features.filesNames;
+
+            foreach (var name in csv_files_names)
+            {
+                String first_row = "Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type" + "\n";
+                var data = File.ReadAllLines(folders.input_sample_features.folderPath + name).Select(a => a.Split(",")); //skip(1) for 1 row
+                var elo = data.ToArray();
+                String new_data = "";
+                Console.WriteLine("count: " + data.Count());
+                for (int i = 0; i < data.Count(); i++)
+                {
+                    if(i==0)
+                    {
+                        new_data += first_row;
+                    }
+                    else
+                    {
+                        var line = elo[i];
+                        for (int j = 0; j < line.Count(); j++)
+                        {
+
+                            if (j == 9)
+                            {
+                                new_data += ",,";
+                                Console.Write($",");
+                            }
+  
+                            new_data += $"{line[j]}";
+                            Console.Write($"{line[j]}");
+                            if (j != line.Count() - 1)
+                            {
+                                new_data += $",";
+                                Console.Write($",");
+                            }
+                        }
+                        new_data += "\n";
+                        Console.WriteLine();
+                    }
+                   
+                }
+                Console.WriteLine();
+
+                var new_file_path_to_save = saving_folder_path + "\\" + name;
+
+                if (!File.Exists(new_file_path_to_save))
+                {
+                    //Console.WriteLine($"File {fileName} was created in {filePath}");
+                    File.WriteAllText(new_file_path_to_save, new_data);
+                }
+
+            }
+        }
+
+
+        public void readCSVFile(FoldersStructure folders)
+        {
+            var data = File.ReadAllLines(folders.input_sample_features.folderPath + "Data54_features.csv").Select(a => a.Split(",")); //skip(1) for 1 row
+            var elo = data.ToList();
+            foreach (var line in data)
+            {
+                for(int i = 0; i<line.Count(); i++ ) 
+                {
+                    Console.Write($"{elo[0][i]}={line[i]} | ");
+                }
+                //foreach (var field in line)
+                //{
+                //    Console.Write($"{field},     ");
+                //}                
+                Console.WriteLine();
+            }
         }
 
         //AU Naile Karakehya,
@@ -196,10 +279,10 @@ namespace ArticleManage
                 //[[[[[[[[[[[[
 
                 ////System.Console.WriteLine(article.DOI);
-                //String folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
-                //if (Directory.Exists(folder_path))
+                //String saving_folder_path = folders.output_folders.folderPath + article.FormalNicelyPDFName.Replace("... .pdf", "") + "\\graphs";
+                //if (Directory.Exists(saving_folder_path))
                 //{
-                //    DirectoryInfo dir = new DirectoryInfo(folder_path);
+                //    DirectoryInfo dir = new DirectoryInfo(saving_folder_path);
                 //    FileInfo[] Files = dir.GetFiles();
                 //    List<string> csv_file_name = new List<string>();
                 //    List<string> bmp_file_name = new List<string>();
@@ -231,7 +314,7 @@ namespace ArticleManage
                 //            foreach (var coloumn1 in listX) newIsotherm.XAxisData.Add(Convert.ToSingle(coloumn1));                            
                 //            foreach (var coloumn1 in listY) newIsotherm.YAxisData.Add(Convert.ToSingle(coloumn1));
 
-                //            string[] name = file.FullName.Replace(folder_path , "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
+                //            string[] name = file.FullName.Replace(saving_folder_path , "").Replace(".csv", "").Replace("\\", "").Replace("[", "").Replace("]", "").Split(' ');
 
                 //            var calibrate = name[3].Split('&');
                 //            if (!name[3].Contains('&'))
@@ -339,7 +422,7 @@ namespace ArticleManage
 
                         //article.IzothermNumber = csv_file_name.Count;
                         article.GraphNumber = article.Graphs.Count;
-                        Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  graphs={article.Graphs.Count} ");
+                        //Console.WriteLine($" {article.FileName} -> csv file = {article.IzothermNumber}  graphs={article.Graphs.Count} ");
                     }
 
                  }

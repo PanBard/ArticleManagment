@@ -11,12 +11,13 @@ namespace ArticleManage
     {
         public Folder input_pdf {  get; set; }
         public Folder input_ris { get; set; }
+        public Folder input_graph { get; set; }
+        public Folder input_sample_features { get; set; }
         public Folder output_pdf { get; set; }
         public Folder output_ris { get; set; }
         public Folder output_folders { get; set; }
         public Folder output_excel { get; set; }
         public Folder output_json { get; set; }
-        public Folder input_graph {  get; set; }
         public Folder plot_digitizer_projects { get; set; }
         public Folder temp { get; set; }
         public Folder temp_graph { get; set; }
@@ -34,6 +35,7 @@ namespace ArticleManage
             //this.plot_digitizer_projects = new Folder("plot_digitizer_projects");
             this.temp = new Folder("temp");
             this.temp_graph = new Folder("temp_graph");
+            this.input_sample_features = new Folder("input_sample_features");
         }
 
 

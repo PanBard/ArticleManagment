@@ -1,0 +1,12 @@
+Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
+2_1,17%BO,,,,,,,,,,,
+2_1,48%BO,,,,,,,,,,,
+2_1,5%BO,,,,,,,,,,,
+2_1,57%BO,,,,,,,,,,,
+2_1,7%BO,,,,,,,,,,,
+2_2,0%BO,,,,,,,,,,,
+2_2,16%BO,,,,,,,,,,,
+2_2,26%BO,,,,,,,,,,,
+2_2,36%BO,,,,,,,,,,,
+2_2,53%BO,,,,,,,,,,,
+2_2,74%BO,,,,,,,,,,,

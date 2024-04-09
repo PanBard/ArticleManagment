@@ -1,4 +1,4 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-5,cellulose,,,,,,,,,,,
-5,PAN,,,,,,,,,,,
-5,PET,,,,,,,,,,,
+5,cellulose,659,,,,,,,,,,
+5,PAN,544,,,,,,,,,,
+5,PET,1254,,,,,,,,,,

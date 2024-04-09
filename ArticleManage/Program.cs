@@ -31,10 +31,6 @@ internal class Program
         jsonExporter jSON = new jsonExporter(folders);
         spinner.Stop();
 
-        //MethodsArchive methodsArchive = new MethodsArchive();
-        //methodsArchive.readCSVFile(folders);
-        //methodsArchive.changeCSVFile(folders);
-
         spinner.Dispose();
     }
 }

@@ -36,7 +36,7 @@ namespace ArticleManage
             var articles = method.returnArticleWithDataFromRISfiles(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
             //var articles2 = method.returnArticleWithAllData(folders.input_ris.filesPaths, folders.input_ris.folderPath, folders);
 
-            //make_samples_features_files(articles); //    <------ to make csv files for sample features !!!
+            make_samples_features_files(articles); //    <------ to make csv files for sample features !!!
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             String excelFilePath = folders.output_excel.folderPath + excelFileName;
@@ -181,19 +181,19 @@ namespace ArticleManage
             {
                 String fileName = $"{article.FileName}_features.csv";
                 String filePath = folders.input_sample_features.folderPath + fileName;                
-                String data = "Figure,Sample,Total_surface[m2/g],V_total[cm3/g],V_micro[cm3/g],V_meso[cm3/g],Pore_diameter[nm],Activ_temp[stC],Activ_time[min],Activ_agent,Material" + "\n";
+                String data = "Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type" + "\n";
                 var graphs = article.Graphs;
                 foreach (var graph in graphs)
                 {                   
                     foreach (var izo in graph.Isotherms)
                     {                            
-                        data += izo.FigureNumber+","+izo.SampleName + ",,,,,,,,," + "\n";                            
+                        data += izo.FigureNumber+","+izo.SampleName + ",,,,,,,,,,," + "\n";                            
                     }                    
                 }
                 
                 if (!File.Exists(filePath))
                 {
-                    //Console.WriteLine($"File {fileName} was created in {filePath}");
+                    Console.WriteLine($"File {fileName} was created in {filePath}");
                     Console.WriteLine(data);
                     File.WriteAllText(filePath, data);
                 }

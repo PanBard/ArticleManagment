@@ -1,6 +1,6 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-5,PAC0,,,,,,,,,,,
-5,PAC2,,,,,,,,,,,
-5,PAC4,,,,,,,,,,,
-5,PAC6,,,,,,,,,,,
-5,PAC8,,,,,,,,,,,
+5,PAC0,643.40,0.57,0.14,,,,,,,,
+5,PAC2,1083.00,0.61,0.38,,,,,,,,
+5,PAC4,1417.00,0.88,0.72,,,,,,,,
+5,PAC6,1626.00,0.96,0.50,,,,,,,,
+5,PAC8,1724.00,1.09,0.39,,,,,,,,

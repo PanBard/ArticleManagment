@@ -1,7 +1,7 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-1,BP18,,,,,,,,,,,
-1,BP31,,,,,,,,,,,
-1,BP46,,,,,,,,,,,
-1,BP72,,,,,,,,,,,
-1,BP8,,,,,,,,,,,
-1,BPQ,,,,,,,,,,,
+1,BP18,697,,,,,,,,,,
+1,BP31,924,,,,,,,,,,
+1,BP46,1078,,,,,,,,,,
+1,BP72,1632,,,,,,,,,,
+1,BP8,306,,,,,,,,,,
+1,BPQ,1074,,,,,,,,,,

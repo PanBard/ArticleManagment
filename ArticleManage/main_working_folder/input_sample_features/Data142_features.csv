@@ -1,4 +1,4 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-1,CNR115,,,,,,,,,,,
-1,CNR115-ox,,,,,,,,,,,
-1,CNR115-ox-am,,,,,,,,,,,
+1,CNR115,1714,0.94,0.64,,,,,,,,
+1,CNR115-ox,929,0.45,0.36,,,,,,,,
+1,CNR115-ox-am,352,0.21,0.14,,,,,,,,

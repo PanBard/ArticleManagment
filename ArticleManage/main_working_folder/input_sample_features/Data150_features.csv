@@ -1,8 +1,8 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-4,10stC,,,,,,,,,,,
-4,30stC,,,,,,,,,,,
-4,50stC,,,,,,,,,,,
-4,5stC,,,,,,,,,,,
+4,10stC,1343,0.9253,0.7004,,,,,,,,
+4,30stC,1101,0.7800,0.5506,,,,,,,,
+4,50stC,1076,0.7629,0.5336,,,,,,,,
+4,5stC,1313,0.8962,0.6729,,,,,,,,
 6,100min,,,,,,,,,,,
 6,120min,,,,,,,,,,,
 6,140min,,,,,,,,,,,

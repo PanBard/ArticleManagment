@@ -1,5 +1,5 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-4,GC-C01,,,,,,,,,,,
-4,GC-C02,,,,,,,,,,,
-4,GC-C03,,,,,,,,,,,
-4,GC-C04,,,,,,,,,,,
+4,GC-C01,117.78,0.08,0.03,,,,,,,,
+4,GC-C02,991.95,0.51,0.25,,,,,,,,
+4,GC-C03,2103.45,1.04,0.44,,,,,,,,
+4,GC-C04,1616.22,0.85,0.19,,,,,,,,

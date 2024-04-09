@@ -1,5 +1,5 @@
 Figure_number,Sample_name,Total_surface_area[m2/g],Total_pore_volume[cm3/g],Micropore_volume[cm3/g],Mesopore_volume[cm3/g],Average_pore_diameter[nm],Activation_temperature[stC],Activation_time[min],Impregnation_ratio[agent/char],Activation_type,Activation_agent,Material_type
-3,1000stC,,,,,,,,,,,
+3,1000stC,1212,,,,,,,,,,
 3,800stC,,,,,,,,,,,
-3,850stC,,,,,,,,,,,
-3,CNF-1,,,,,,,,,,,
+3,850stC,491,,,,,,,,,,
+3,CNF-1,143,,,,,,,,,,

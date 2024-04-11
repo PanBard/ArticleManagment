@@ -20,10 +20,13 @@ namespace ArticleManage
         public List<float> XAxisData { get; set; }
         public List<float> YAxisData { get; set; }
 
+        public SampleFeatures SampleFeatures { get; set; }
+
         public Isotherm()
         {
             XAxisData = new List<float>();
             YAxisData = new List<float>();
+            SampleFeatures = new SampleFeatures();
         }
 
     }

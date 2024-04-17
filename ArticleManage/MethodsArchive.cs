@@ -384,6 +384,7 @@ namespace ArticleManage
                 samples.RemoveAt(0);
                 foreach (var line in samples)
                 {
+                    
                     SampleFeatures oneSampleFeature = new SampleFeatures();
                     oneSampleFeature.Figure_number = line[0];
                     oneSampleFeature.Sample_name = line[1];
